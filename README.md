@@ -1,5 +1,5 @@
-<h1 align="center">Hi 👋, I'm Yaseen Saad Eldin Mohamed</h1>
-<h3 align="center">A full-stack web developer and young physicist</h3>
+<h1 align="center">Hi 👋, I'm Yaseen Saad-Eldin Mohamed-Sabry Mohamed-Abdelal</h1>
+<h3 align="center">A Full-Stack Web Developer, Machine Learning specialist, Robotics Engineer, and young Computetional Scientist</h3>
 
 <p align="left"> <img src="https://komarev.com/ghpvc/?username=yaseen-saad&label=Profile%20views&color=0e75b6&style=flat" alt="yaseen-saad" /> </p>
 
