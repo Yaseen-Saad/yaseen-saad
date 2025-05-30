@@ -1,6 +1,6 @@
 # Yaseen's Personal Website
 
-Welcome to the repository for **Yaseen Mohamed-Abdelal's Personal Website**, a creative blend of humor, professionalism, and artistic design. This site aims to showcase my unique personality, projects, and perspectives in an engaging and dynamic way.
+Welcome to the repository for **Yaseen's Personal Website**, a creative blend of humor, professionalism, and artistic design. This site aims to showcase my unique personality, projects, and perspectives in an engaging and dynamic way.
 
 ---
 
