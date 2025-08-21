@@ -182,7 +182,7 @@ export default function ArchivePage() {
               <div className={`${item.color} text-white p-6`}>
                 <div className="flex items-center justify-between mb-4">
                   {item.icon}
-                  <span className={`px-3 py-1 rounded-full text-xs font-semibold ${categoryColors[item.category]}`}>
+                  <span className={`px-3 py-1 rounded-full text-xs font-semibold ${categoryColors[item.category as CategoryType]}`}>
                     {item.category}
                   </span>
                 </div>
