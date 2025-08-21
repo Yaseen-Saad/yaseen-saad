@@ -16,12 +16,8 @@ This portfolio website is designed to present a complete picture of Yaseen's aca
 - **Tailwind CSS**: Utility-first styling
 - **Framer Motion**: Smooth animations and transitions
 - **Heroicons**: Beautiful SVG icons
-- **SWR**: Data fetching with caching
 
 ### Backend & Data
-- **Node.js**: Server runtime
-- **Express**: Web framework
-- **Firebase**: Database and authentication
 - **JSON**: Static content management
 
 ### Development Tools
