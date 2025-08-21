@@ -213,7 +213,7 @@ class GitHubStats {
       const repos = await fetch(\`\${this.baseURL}/users/\${this.username}/repos\`);
       const repoData = await repos.json();
       
-      const languages = {};
+      const languages: Record<string, number> = {};
       
       for (const repo of repoData) {
         if (repo.language) {
