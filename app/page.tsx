@@ -1,8 +1,8 @@
 import HomePageWrapper from '@/components/HomePageWrapper';
 
 export const metadata = {
-  title: '<Yasoo/> - A Chill Guy Trying to Decode the Universe',
-  description: 'High-schooler by day, philosopher by thought, coder by passion, and physicist by curiosity! Welcome to my corner of the internet.',
+  title: 'Home - Where Physics Meets Imagination',
+  description: 'Welcome to the digital universe of Yaseen - where quantum mechanics meets code, and curiosity drives discovery.',
 };
 
 export default function HomePage() {

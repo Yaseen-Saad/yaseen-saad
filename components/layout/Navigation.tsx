@@ -24,7 +24,7 @@ export default function Navigation() {
           {/* Logo */}
           <Link 
             href="/" 
-            className="text-2xl font-bold text-black dark:text-white hover:text-gray-600 dark:hover:text-gray-300 transition-colors"
+            className="text-2xl font-bold text-black dark:text-white hover:text-gray-600 dark:hover:text-gray-300 transition-colors font-yasoo"
           >
                 &lt; Yasoo /&gt;
           </Link>

@@ -33,7 +33,7 @@ export default function Footer() {
           {/* Left column - Brand and quote */}
           <div className="space-y-6">
             <div>
-              <h3 className="text-3xl font-bold mb-2">Yasoo</h3>
+              <h3 className="text-3xl font-bold mb-2 font-yasoo">Yasoo</h3>
               <p className="text-gray-300 dark:text-gray-700 font-serif italic">
                 A chill guy trying to decode the universe
               </p>

@@ -31,6 +31,7 @@ module.exports = {
         'sans': ['Inter', 'system-ui', 'sans-serif'],
         'mono': ['JetBrains Mono', 'Fira Code', 'monospace'],
         'display': ['Crimson Text', 'Georgia', 'serif'], // Using serif as display font instead of Playfair
+        'yasoo': ['var(--font-space-mono)', 'monospace'], // Special font for Yasoo branding
       },
       animation: {
         'fade-in': 'fadeIn 0.8s ease-in-out',
