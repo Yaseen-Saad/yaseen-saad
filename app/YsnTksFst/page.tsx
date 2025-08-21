@@ -398,7 +398,7 @@ export default function ThoughtsPage() {
                 </span>
               </div>
               
-              <h1 className="text-4xl md:text-5xl font-bold font-playfair text-black dark:text-white mb-4">
+              <h1 className="text-4xl md:text-5xl font-bold text-black dark:text-white mb-4">
                 {post.title}
               </h1>
               

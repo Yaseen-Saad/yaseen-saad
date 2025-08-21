@@ -503,7 +503,7 @@ export default function ProjectsPage() {
               <RocketLaunchIcon className="w-12 h-12" />
             </div>
           </div>
-          <h1 className="text-4xl md:text-6xl font-bold font-playfair mb-6 text-black dark:text-white">
+          <h1 className="text-4xl md:text-6xl font-bold mb-6 text-black dark:text-white">
             Project Showcase
           </h1>
           <p className="text-lg md:text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto leading-relaxed">

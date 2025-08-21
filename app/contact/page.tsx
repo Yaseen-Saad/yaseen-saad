@@ -2,7 +2,7 @@ export default function ContactPage() {
   return (
     <div className="min-h-screen pt-20 px-4 sm:px-6 lg:px-8 bg-white dark:bg-black">
       <div className="max-w-4xl mx-auto">
-        <h1 className="text-4xl md:text-6xl font-bold font-playfair mb-8 text-black dark:text-white">
+        <h1 className="text-4xl md:text-6xl font-bold mb-8 text-black dark:text-white">
           Let's Connect
         </h1>
         <p className="text-lg text-gray-600 dark:text-gray-400 mb-12">

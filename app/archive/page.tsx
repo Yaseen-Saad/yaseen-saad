@@ -110,7 +110,9 @@ const archiveItems = [
   }
 ]
 
-const categoryColors = {
+type CategoryType = 'Academic' | 'Programming' | 'Achievements' | 'Speaking' | 'Memories' | 'Education';
+
+const categoryColors: Record<CategoryType, string> = {
   'Academic': 'bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200',
   'Programming': 'bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200',
   'Achievements': 'bg-yellow-100 dark:bg-yellow-900 text-yellow-800 dark:text-yellow-200',
