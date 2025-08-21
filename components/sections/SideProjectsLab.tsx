@@ -136,7 +136,9 @@ const sideProjects = [
   }
 ]
 
-const statusColors = {
+type StatusType = 'Live' | 'Active' | 'Beta' | 'Prototype' | 'Experimental' | 'Planning';
+
+const statusColors: Record<StatusType, string> = {
   'Live': 'bg-black',
   'Active': 'bg-gray-800',
   'Beta': 'bg-gray-600',
