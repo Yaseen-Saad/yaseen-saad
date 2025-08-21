@@ -1,7 +1,6 @@
 import PersonalStory from '@/components/sections/PersonalStory';
 import Timeline from '@/components/sections/Timeline';
 import PhilosophyCorner from '@/components/sections/PhilosophyCorner';
-import GallerySection from '@/components/GallerySection';
 
 export const metadata = {
   title: 'About - Yaseen Saad Eldin',
@@ -13,7 +12,6 @@ export default function AboutPage() {
     <div className="min-h-screen pt-20">
       <PersonalStory />
       <Timeline />
-      <GallerySection />
       <PhilosophyCorner />
     </div>
   );
