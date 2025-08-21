@@ -187,7 +187,7 @@ export default function SideProjectsLab() {
               <div className={`${project.color} text-white p-6`}>
                 <div className="flex items-center justify-between mb-4">
                   {project.icon}
-                  <span className={`px-3 py-1 rounded-full text-xs font-mono uppercase tracking-wider ${statusColors[project.status]} text-white`}>
+                  <span className={`px-3 py-1 rounded-full text-xs font-mono uppercase tracking-wider ${statusColors[project.status as StatusType]} text-white`}>
                     {project.status}
                   </span>
                 </div>
