@@ -142,7 +142,6 @@ const RandomThoughtGenerator = () => {
 
 export default function QuantumThoughts() {
   const [selectedCategory, setSelectedCategory] = useState('All Thoughts')
-  const [selectedThought, setSelectedThought] = useState<string | null>(null)
 
   const filteredThoughts = selectedCategory === 'All Thoughts' 
     ? quantumThoughts 
@@ -209,8 +208,7 @@ export default function QuantumThoughts() {
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
                 whileHover={{ scale: 1.02 }}
-                onClick={() => setSelectedThought(selectedThought === thought.id ? null : thought.id)}
-                className="bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-lg overflow-hidden cursor-pointer hover:border-black dark:hover:border-white transition-all duration-300"
+                className="bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-lg overflow-hidden hover:border-black dark:hover:border-white transition-all duration-300"
               >
                 {/* Header */}
                 <div className="bg-black dark:bg-white text-white dark:text-black p-4">
@@ -232,33 +230,6 @@ export default function QuantumThoughts() {
                   <p className="text-gray-700 dark:text-gray-300 leading-relaxed italic text-sm">
                     "{thought.thought}"
                   </p>
-
-                  {selectedThought === thought.id && (
-                    <motion.div
-                      initial={{ opacity: 0, height: 0 }}
-                      animate={{ opacity: 1, height: 'auto' }}
-                      className="mt-3 pt-3 border-t border-gray-200 dark:border-gray-800"
-                    >
-                      <div className="space-y-2 text-xs text-gray-600 dark:text-gray-400">
-                        <div className="flex items-center gap-2">
-                          <StarIcon className="w-3 h-3" />
-                          <span>Related concepts: {thought.field}</span>
-                        </div>
-                        <div className="flex items-center gap-2">
-                          <BookOpenIcon className="w-3 h-3" />
-                          <span>Thought triggered by: Late night coding session</span>
-                        </div>
-                        <div className="flex gap-2 mt-2">
-                          <button className="px-2 py-1 bg-black dark:bg-white text-white dark:text-black rounded text-xs hover:bg-gray-800 dark:hover:bg-gray-200 transition-colors">
-                            Share Thought
-                          </button>
-                          <button className="px-2 py-1 border border-black dark:border-white text-black dark:text-white rounded text-xs hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition-colors">
-                            Add Comment
-                          </button>
-                        </div>
-                      </div>
-                    </motion.div>
-                  )}
                 </div>
               </motion.div>
             ))}

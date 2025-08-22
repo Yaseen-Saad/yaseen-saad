@@ -4,8 +4,8 @@ import CodePlayground from '@/components/sections/CodePlayground';
 import DigitalPlayground from '@/components/sections/DigitalPlayground';
 
 export const metadata = {
-  title: 'Skills & Tech - Yaseen Saad Eldin',
-  description: 'Explore my technical skills, programming experience, and projects.',
+  title: 'Skills - My Digital Arsenal & Quantum Toolkit',
+  description: 'Explore the fusion of physics intuition and coding mastery - where theoretical knowledge meets practical implementation.',
 };
 
 export default function SkillsPage() {

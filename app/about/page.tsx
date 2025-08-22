@@ -3,8 +3,8 @@ import Timeline from '@/components/sections/Timeline';
 import PhilosophyCorner from '@/components/sections/PhilosophyCorner';
 
 export const metadata = {
-  title: 'About - Yaseen Saad Eldin',
-  description: 'Learn more about my journey, philosophy, and aspirations.',
+  title: 'About - The Universe Through My Eyes',
+  description: 'Dive deep into my journey - from quantum physics fascination to late-night coding sessions, philosophy debates to STEM competitions.',
 };
 
 export default function AboutPage() {

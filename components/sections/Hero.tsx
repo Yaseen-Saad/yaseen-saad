@@ -29,6 +29,7 @@ const quotes = [
 ];
 
 const currentActivities = [
+  { activity: "Praying", icon: <MusicalNoteIcon className="w-5 h-5" /> },
   { activity: "Listening to Wegz - El Bakht while coding", icon: <MusicalNoteIcon className="w-5 h-5" /> },
   { activity: "Solving quantum mechanics to Marwan Pablo", icon: <CalculatorIcon className="w-5 h-5" /> },
   { activity: "Debugging React with Abyusif beats", icon: <BugAntIcon className="w-5 h-5" /> },
