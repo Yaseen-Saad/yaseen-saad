@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react';
 import Hero from '@/components/sections/Hero';
 import LastTinyAces from '@/components/sections/LastTinyAces';
 import CurrentlyCooking from '@/components/sections/CurrentlyCooking';
-import PhotoGallery from '@/components/sections/PhotoGallery';
+import QuickGallery from '@/components/sections/QuickGallery';
 import ResourceLibrary from '@/components/sections/ResourceLibrary';
 import SideProjectsLab from '@/components/sections/SideProjectsLab';
 import QuantumThoughts from '@/components/sections/QuantumThoughts';
@@ -35,7 +35,7 @@ export default function HomePageWrapper() {
       <ScoresAchievements />
       <LastTinyAces />
       <MusicRapSection />
-      <PhotoGallery />
+      <QuickGallery />
       <QuantumThoughts />
       <SideProjectsLab />
       <CurrentlyCooking />

@@ -151,11 +151,11 @@ export default function DigitalPlayground() {
             <span className="text-sm font-mono font-bold text-purple-600 dark:text-purple-400">DIGITAL PLAYGROUND</span>
           </div>
           <h2 className="text-4xl md:text-5xl font-bold mb-6 text-black dark:text-white">
-            Interactive Experiments
+            Digital Playground
           </h2>
           <p className="text-lg md:text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto leading-relaxed">
-            Where code meets creativity! These are my digital experiments - interactive demos, 
-            simulations, and tools that bring abstract concepts to life. Click, play, and explore!
+            Where code meets creativity! These are my digital experiments - simulations, 
+            and tools that bring abstract concepts to life. Explore my creative coding journey!
           </p>
         </motion.div>
 

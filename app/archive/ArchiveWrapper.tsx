@@ -28,7 +28,7 @@ interface ArchiveItem {
   featured?: boolean
 }
 
-type CategoryType = 'all' | 'papers' | 'code' | 'certificates' | 'presentations' | 'photos' | 'notes';
+type CategoryType = 'all' | 'research' | 'computational' | 'certificates' | 'presentations' | 'photos' | 'notes' | 'projects' | 'publications';
 
 export default function ArchiveWrapper() {
   const [selectedCategory, setSelectedCategory] = useState<CategoryType>('all')
@@ -40,7 +40,7 @@ export default function ArchiveWrapper() {
       id: 1,
       title: 'Stellar Evolution Prediction Using Machine Learning',
       description: 'A comprehensive study on predicting stellar lifecycles using neural networks and observational data from astronomical databases.',
-      category: 'Physics Research Papers',
+      category: 'Research Papers',
       date: '2024-01-15',
       type: 'paper',
       tags: ['machine learning', 'astrophysics', 'stellar evolution', 'neural networks'],
@@ -52,39 +52,83 @@ export default function ArchiveWrapper() {
       id: 2,
       title: 'Quantum State Visualization Techniques',
       description: 'Exploring novel methods for visualizing quantum superposition and entanglement in educational contexts.',
-      category: 'Physics Research Papers',
+      category: 'Research Papers',
       date: '2023-11-20',
       type: 'paper',
       tags: ['quantum mechanics', 'visualization', 'education', 'physics'],
       downloadUrl: '/papers/quantum-visualization.pdf',
       featured: true
     },
-    
-    // Project Source Code Archive
     {
       id: 3,
+      title: 'Computational Physics in Educational Platforms',
+      description: 'Research on integrating computational physics simulations into online learning environments.',
+      category: 'Research Papers',
+      date: '2024-03-10',
+      type: 'paper',
+      tags: ['computational physics', 'education', 'simulation', 'e-learning'],
+      downloadUrl: '/papers/computational-education.pdf'
+    },
+    
+    // Computational Experiments
+    {
+      id: 4,
+      title: 'N-Body Gravitational Simulation',
+      description: 'High-performance simulation of gravitational interactions between multiple celestial bodies using optimized algorithms.',
+      category: 'Computational Experiments',
+      date: '2024-02-20',
+      type: 'code',
+      tags: ['physics simulation', 'n-body problem', 'optimization', 'javascript'],
+      viewUrl: 'https://github.com/yaseen-saad/n-body-sim',
+      featured: true
+    },
+    {
+      id: 5,
+      title: 'Quantum Circuit Simulator',
+      description: 'JavaScript implementation of quantum gate operations and circuit simulation with visualization capabilities.',
+      category: 'Computational Experiments',
+      date: '2024-01-05',
+      type: 'code',
+      tags: ['quantum computing', 'simulation', 'gates', 'visualization'],
+      viewUrl: 'https://github.com/yaseen-saad/quantum-sim'
+    },
+    {
+      id: 6,
+      title: 'Machine Learning for Physics Data',
+      description: 'Experimental ML models for analyzing physics competition data and predicting student performance.',
+      category: 'Computational Experiments',
+      date: '2023-12-15',
+      type: 'code',
+      tags: ['machine learning', 'data analysis', 'physics', 'education'],
+      viewUrl: 'https://github.com/yaseen-saad/physics-ml'
+    },
+    
+    // Project Archives
+    {
+      id: 7,
       title: 'EPhO Platform Complete Source',
       description: 'Full source code for the Egyptian Physics Olympiad platform including frontend, backend, and deployment configurations.',
-      category: 'Project Source Code Archive',
+      category: 'Project Archives',
       date: '2024-02-10',
       type: 'code',
       tags: ['next.js', 'node.js', 'postgresql', 'education platform'],
-      viewUrl: 'https://github.com/yaseen-saad/epho-platform'
+      viewUrl: 'https://github.com/yaseen-saad/epho-platform',
+      featured: true
     },
     {
-      id: 4,
-      title: 'Physics Simulation Engine',
-      description: 'JavaScript/WebGL physics engine for real-time interactive simulations of classical mechanics.',
-      category: 'Project Source Code Archive',
-      date: '2023-12-05',
+      id: 8,
+      title: 'Youth Science Journal Platform',
+      description: 'Complete platform for scientific publication and peer review for young researchers.',
+      category: 'Project Archives',
+      date: '2023-10-20',
       type: 'code',
-      tags: ['javascript', 'webgl', 'physics engine', 'simulation'],
-      viewUrl: 'https://github.com/yaseen-saad/physics-engine'
+      tags: ['scientific publishing', 'peer review', 'web platform', 'science'],
+      viewUrl: 'https://github.com/yaseen-saad/science-journal'
     },
     
     // Certificates & Awards
     {
-      id: 5,
+      id: 9,
       title: 'International Physics Realm Gold Medal',
       description: 'Gold medal achievement in the International Physics Realm competition, demonstrating excellence in theoretical physics.',
       category: 'Certificates & Awards',
@@ -95,19 +139,53 @@ export default function ArchiveWrapper() {
       featured: true
     },
     {
-      id: 6,
-      title: 'STEM High School Top 0.2% Entrance',
-      description: 'Certificate acknowledging placement in the top 0.2% of applicants for STEM High School admission.',
+      id: 10,
+      title: 'Physics Brawl Africa Champion',
+      description: '1st place in Africa and 34th globally in Physics Brawl Category B 2024, breaking African participation records.',
       category: 'Certificates & Awards',
-      date: '2022-08-01',
+      date: '2024-02-10',
       type: 'certificate',
-      tags: ['academic achievement', 'STEM education', 'entrance exam'],
-      viewUrl: '/certificates/stem-entrance.pdf'
+      tags: ['physics brawl', 'africa champion', 'record breaking', 'competition'],
+      viewUrl: '/certificates/physics-brawl-2024.pdf',
+      featured: true
+    },
+    {
+      id: 11,
+      title: 'DECI GEEKS Competition Winner',
+      description: 'First place victory in the Digital Egypt Cubs Initiative programming competition.',
+      category: 'Certificates & Awards',
+      date: '2023-11-30',
+      type: 'certificate',
+      tags: ['programming', 'DECI', 'first place', 'coding competition'],
+      viewUrl: '/certificates/deci-geeks.pdf'
+    },
+    
+    // Publications & Articles
+    {
+      id: 12,
+      title: 'Physics Education in the Digital Age',
+      description: 'Published article on modernizing physics education through technology integration.',
+      category: 'Publications & Articles',
+      date: '2024-01-25',
+      type: 'paper',
+      tags: ['physics education', 'technology', 'digital learning', 'publication'],
+      downloadUrl: '/publications/physics-digital-age.pdf',
+      viewUrl: '/publications/physics-digital-age-preview'
+    },
+    {
+      id: 13,
+      title: 'Computational Thinking for Young Scientists',
+      description: 'Article series on developing computational thinking skills in science education.',
+      category: 'Publications & Articles',
+      date: '2023-12-10',
+      type: 'paper',
+      tags: ['computational thinking', 'science education', 'programming', 'youth'],
+      downloadUrl: '/publications/computational-thinking.pdf'
     },
     
     // Presentations & Talks
     {
-      id: 7,
+      id: 14,
       title: 'Machine Learning in Astrophysics',
       description: 'Presentation delivered at the Egyptian Physics Society on applications of ML in astronomical research.',
       category: 'Presentations & Talks',
@@ -118,7 +196,7 @@ export default function ArchiveWrapper() {
       viewUrl: '/presentations/ml-astrophysics-preview'
     },
     {
-      id: 8,
+      id: 15,
       title: 'Building Educational Platforms',
       description: 'Tech talk on designing and scaling educational technology platforms for STEM subjects.',
       category: 'Presentations & Talks',
@@ -130,7 +208,7 @@ export default function ArchiveWrapper() {
     
     // Competition & Event Photos
     {
-      id: 9,
+      id: 16,
       title: 'Physics Olympiad Training Camp',
       description: 'Collection of photos from intensive physics olympiad preparation sessions and team building activities.',
       category: 'Competition & Event Photos',
@@ -140,7 +218,7 @@ export default function ArchiveWrapper() {
       viewUrl: '/gallery/physics-camp-2024'
     },
     {
-      id: 10,
+      id: 17,
       title: 'Hackathon Victory Moments',
       description: 'Photos capturing the excitement of winning multiple hackathons and coding competitions.',
       category: 'Competition & Event Photos',
@@ -152,7 +230,7 @@ export default function ArchiveWrapper() {
     
     // Study Notes & Materials
     {
-      id: 11,
+      id: 18,
       title: 'Advanced Quantum Mechanics Notes',
       description: 'Comprehensive study notes covering advanced topics in quantum mechanics, including original derivations and problem solutions.',
       category: 'Study Notes & Materials',
@@ -163,7 +241,7 @@ export default function ArchiveWrapper() {
       featured: true
     },
     {
-      id: 12,
+      id: 19,
       title: 'Algorithms & Data Structures Cheat Sheet',
       description: 'Personal reference guide for competitive programming, including time complexities and implementation templates.',
       category: 'Study Notes & Materials',
@@ -176,12 +254,14 @@ export default function ArchiveWrapper() {
 
   const categories = [
     { id: 'all', title: 'All Items', icon: FolderIcon },
-    { id: 'papers', title: 'Physics Research Papers', icon: DocumentTextIcon },
-    { id: 'code', title: 'Project Source Code Archive', icon: CodeBracketIcon },
+    { id: 'research', title: 'Research Papers', icon: DocumentTextIcon },
+    { id: 'computational', title: 'Computational Experiments', icon: CodeBracketIcon },
     { id: 'certificates', title: 'Certificates & Awards', icon: AcademicCapIcon },
     { id: 'presentations', title: 'Presentations & Talks', icon: DocumentTextIcon },
     { id: 'photos', title: 'Competition & Event Photos', icon: PhotoIcon },
-    { id: 'notes', title: 'Study Notes & Materials', icon: DocumentTextIcon }
+    { id: 'notes', title: 'Study Notes & Materials', icon: DocumentTextIcon },
+    { id: 'projects', title: 'Project Archives', icon: CodeBracketIcon },
+    { id: 'publications', title: 'Publications & Articles', icon: DocumentTextIcon }
   ]
 
   const getTypeIcon = (type: string) => {
@@ -198,12 +278,14 @@ export default function ArchiveWrapper() {
 
   const filteredItems = archiveItems.filter(item => {
     const matchesCategory = selectedCategory === 'all' || 
-      (selectedCategory === 'papers' && item.category === 'Physics Research Papers') ||
-      (selectedCategory === 'code' && item.category === 'Project Source Code Archive') ||
+      (selectedCategory === 'research' && item.category === 'Research Papers') ||
+      (selectedCategory === 'computational' && item.category === 'Computational Experiments') ||
       (selectedCategory === 'certificates' && item.category === 'Certificates & Awards') ||
       (selectedCategory === 'presentations' && item.category === 'Presentations & Talks') ||
       (selectedCategory === 'photos' && item.category === 'Competition & Event Photos') ||
-      (selectedCategory === 'notes' && item.category === 'Study Notes & Materials')
+      (selectedCategory === 'notes' && item.category === 'Study Notes & Materials') ||
+      (selectedCategory === 'projects' && item.category === 'Project Archives') ||
+      (selectedCategory === 'publications' && item.category === 'Publications & Articles')
     
     const matchesSearch = searchTerm === '' || 
       item.title.toLowerCase().includes(searchTerm.toLowerCase()) ||

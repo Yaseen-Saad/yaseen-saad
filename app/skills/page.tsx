@@ -1,6 +1,5 @@
 import TechStackShowcase from '@/components/sections/TechStackShowcase';
 import YouMayNeedMe from '@/components/sections/YouMayNeedMe';
-import CodePlayground from '@/components/sections/CodePlayground';
 import DigitalPlayground from '@/components/sections/DigitalPlayground';
 
 export const metadata = {
@@ -13,7 +12,6 @@ export default function SkillsPage() {
     <div className="min-h-screen pt-20">
       <YouMayNeedMe />
       <TechStackShowcase />
-      <CodePlayground />
       <DigitalPlayground />
     </div>
   );
