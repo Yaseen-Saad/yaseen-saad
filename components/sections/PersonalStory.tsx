@@ -32,7 +32,7 @@ export default function PersonalStory() {
             viewport={{ once: true }}
             className="prose prose-lg max-w-none"
           >
-            <div className="bg-white dark:bg-black border-2 border-black dark:border-white p-8 md:p-12 shadow-lg font-serif text-lg leading-relaxed">
+            <div className="bg-white dark:bg-black border-2 border-black dark:border-white p-8 md:p-12 shadow-lg font-serif text-lg leading-relaxed [&_strong]:text-black [&_strong]:dark:text-white">
               <p className="text-xl font-bold text-black dark:text-white mb-6">
                 "Greetings from Giza!"
               </p>
