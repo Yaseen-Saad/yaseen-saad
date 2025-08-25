@@ -2,13 +2,15 @@
 
 import { motion } from 'framer-motion';
 import { useState, useEffect } from 'react';
-import { 
-  MusicalNoteIcon, 
-  ClockIcon, 
-  ComputerDesktopIcon,
+import {
+  MusicalNoteIcon,
   CalculatorIcon,
   BugAntIcon,
+  CodeBracketIcon,
   BookOpenIcon,
+  TrophyIcon,
+  GlobeAltIcon,
+  StarIcon,
   FaceSmileIcon,
   CakeIcon,
   MicrophoneIcon,
@@ -69,10 +71,14 @@ export default function Hero() {
   const [isVisible, setIsVisible] = useState(true);
   const [currentTime, setCurrentTime] = useState(new Date());
   const [showCurrentActivity, setShowCurrentActivity] = useState(false);
-  
-  // Get the most recent activity (first one in the array)
-  const mostRecentActivity = currentActivities[0];
-  
+
+  // Get the current activity from environment variable
+  const envActivity = process.env.NEXT_PUBLIC_CURRENT_ACTIVITY;
+  const mostRecentActivity = {
+    activity: envActivity || "Listening to Wegz - El Bakht while coding",
+    icon: <MusicalNoteIcon className="w-5 h-5" />
+  };
+
   // Typewriter effect for the name
   const { displayText: nameText, showCursor } = useTypewriter("Yaseen Saad-Eldin", 150);
 
@@ -115,7 +121,7 @@ export default function Hero() {
     <section className="min-h-screen bg-white dark:bg-black relative overflow-hidden mt-16 pt-20 pb-16">
       {/* Subtle noise texture */}
       <div className="absolute inset-0 bg-noise opacity-[0.03] pointer-events-none"></div>
-      
+
       {/* Floating Currently Doing Indicator */}
       <motion.div
         initial={{ opacity: 0, scale: 0 }}
@@ -128,7 +134,7 @@ export default function Hero() {
         <div className="bg-black dark:bg-white text-white dark:text-black p-3 rounded-full shadow-lg cursor-pointer hover:scale-110 transition-transform">
           <SparklesIcon className="w-5 h-5" />
         </div>
-        
+
         {/* Tooltip on hover */}
         {showCurrentActivity && (
           <motion.div
@@ -147,7 +153,7 @@ export default function Hero() {
           </motion.div>
         )}
       </motion.div>
-      
+
       <div className="container mx-auto px-4 sm:px-6 min-h-[calc(100vh-5rem)] flex items-center justify-center">
         <div className="max-w-6xl mx-auto">
           <div className="flex flex-col lg:flex-row items-center justify-center gap-8 lg:gap-16 mb-8">
@@ -227,12 +233,12 @@ export default function Hero() {
                 <p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-600 dark:text-gray-400 mt-2 sm:mt-3 font-mono">
                   "High-schooler by day, philosopher by thought, coder by passion, and physicist by curiosity!"
                 </p>
-                
+
                 {/* Personal details - now properly responsive */}
                 <div className="mt-4 sm:mt-6 space-y-2">
                   <div className="flex flex-col sm:flex-row sm:items-center sm:gap-4 text-xs sm:text-sm font-mono text-gray-500 dark:text-gray-500 uppercase tracking-wider">
                     <span className="border-l-2 border-black dark:border-white pl-3 py-1">
-Just me and my thoughts                    </span>
+                      Just me and my thoughts                    </span>
                     <span className="border-l-2 border-black dark:border-white pl-3 py-1 sm:border-l-0 sm:border-r-2 sm:pr-3 sm:pl-0">
                       Giza, Egypt • STEM School
                     </span>
@@ -290,9 +296,9 @@ Just me and my thoughts                    </span>
               </div>
             </div>
             <div className="text-center border-t-2 border-black dark:border-white pt-6">
-              <div className="text-3xl font-bold text-black dark:text-white mb-2">1st Place</div>
+              <div className="text-3xl font-bold text-black dark:text-white mb-2">Top 0.16%</div>
               <div className="text-sm font-mono text-gray-600 dark:text-gray-400 uppercase tracking-wider">
-                Physics Brawl Africa 2024
+                Egyptian Chemistry Olympiad 2025
               </div>
             </div>
           </motion.div>
@@ -314,6 +320,37 @@ Just me and my thoughts                    </span>
             ></motion.div>
           </motion.div>
         </div>
+      </div>
+      <div className="container mx-auto px-4 sm:px-6 flex items-center justify-center">
+        {/* Summary Stats */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.6 }}
+          className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-6"
+        >
+          <div className="text-center bg-black dark:bg-white text-white dark:text-black p-6 rounded-lg">
+            <TrophyIcon className="w-8 h-8 mx-auto mb-3" />
+            <div className="text-2xl font-bold mb-2">4.0/4.0</div>
+            <div className="text-sm font-mono uppercase tracking-wider">GPA</div>
+          </div>
+          <div className="text-center bg-black dark:bg-white text-white dark:text-black p-6 rounded-lg">
+            <CodeBracketIcon className="w-8 h-8 mx-auto mb-3" />
+            <div className="text-2xl font-bold mb-2">90+</div>
+            <div className="text-sm font-mono uppercase tracking-wider">Coding Projects Made</div>
+          </div>
+          <div className="text-center bg-black dark:bg-white text-white dark:text-black p-6 rounded-lg">
+            <GlobeAltIcon className="w-8 h-8 mx-auto mb-3" />
+            <div className="text-2xl font-bold mb-2">220+</div>
+            <div className="text-sm font-mono uppercase tracking-wider">Sessions Made</div>
+          </div>
+          <div className="text-center bg-black dark:bg-white text-white dark:text-black p-6 rounded-lg">
+            <StarIcon className="w-8 h-8 mx-auto mb-3" />
+            <div className="text-2xl font-bold mb-2">1520</div>
+            <div className="text-sm font-mono uppercase tracking-wider">SAT October (Planed)</div>
+          </div>
+        </motion.div>
       </div>
     </section>
   );

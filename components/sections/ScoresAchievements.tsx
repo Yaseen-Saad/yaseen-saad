@@ -2,9 +2,9 @@
 
 import React, { useState } from 'react'
 import { motion } from 'framer-motion'
-import { 
-  TrophyIcon, 
-  AcademicCapIcon, 
+import {
+  TrophyIcon,
+  AcademicCapIcon,
   ChartBarIcon,
   StarIcon,
   BookOpenIcon,
@@ -17,85 +17,102 @@ const academicScores = [
   {
     category: 'GPA & Grades',
     items: [
-      { name: 'Current GPA', score: '3.9/4.0', detail: '93-97% Average', icon: <AcademicCapIcon className="w-5 h-5" /> },
-      { name: 'Grade 11 Average', score: '95%', detail: 'STEM High School', icon: <BookOpenIcon className="w-5 h-5" /> },
-      { name: 'Grade 10 Average', score: '94%', detail: 'STEM High School', icon: <BookOpenIcon className="w-5 h-5" /> },
-      { name: 'Grade 9 Average', score: '96%', detail: 'STEM High School', icon: <BookOpenIcon className="w-5 h-5" /> }
+      { name: 'Current GPA', score: '4.0/4.0', detail: 'STEM High School for Boys 6th of October', icon: <AcademicCapIcon className="w-5 h-5" /> },
+      { name: 'Capstone Grade', score: 'A+', detail: 'A+ Grade in all 4 School Research Projects', icon: <AcademicCapIcon className="w-5 h-5" /> },
+      { name: 'Peak Grades', score: '4', detail: 'A+ Chemistry, A+ Physics, A+ Mechanics, A+ French', icon: <BookOpenIcon className="w-5 h-5" /> },
+      { name: 'Grade 9', score: '98.75%', detail: 'Martyr Mohamed Fawzy El-Hawfy Language School', icon: <BookOpenIcon className="w-5 h-5" /> }
     ]
   },
   {
     category: 'Standardized Tests',
     items: [
-      { name: 'STEM Entrance Exam', score: 'Top 0.2%', detail: '33rd/15,000+ candidates', icon: <StarIcon className="w-5 h-5" /> },
+      { name: 'STEM Entrance Exam', score: '33rd', detail: 'Out of 15,000+ of Egypt\'s most intelegent candidates', icon: <StarIcon className="w-5 h-5" /> },
       { name: 'TOFAS Exam', score: '56/60', detail: '93.3% Score', icon: <ChartBarIcon className="w-5 h-5" /> },
-      { name: 'SAT (Planned)', score: 'June 2025', detail: 'Target: 1500+', icon: <AcademicCapIcon className="w-5 h-5" /> },
-      { name: 'TOEFL (Planned)', score: 'May 2025', detail: 'Target: 110+', icon: <GlobeAltIcon className="w-5 h-5" /> }
+      { name: 'SAT (Planned)', score: 'October 2025', detail: 'Target: 1500+. Current: 1420', icon: <AcademicCapIcon className="w-5 h-5" /> },
+      { name: 'Dulingo English Test (Planned)', score: 'November 2025', detail: 'Target: 130+', icon: <GlobeAltIcon className="w-5 h-5" /> }
     ]
   }
 ]
 
 const competitions = [
   {
-    category: 'Physics Olympiads',
+    category: 'Physics Compeitions',
     achievements: [
-      { 
-        name: 'International Physics Realm (IPhR)', 
-        rank: '5th Place Worldwide', 
+      {
+        name: 'International Physics Realm (IPhR)',
+        rank: '5th Place Worldwide',
         detail: 'Gold Medal • 1,180+ participants • Regular category',
         year: '2024',
-        color: 'from-yellow-400 to-yellow-600'
       },
-      { 
-        name: 'Physics Brawl Online', 
-        rank: '1st in Africa', 
+       {
+        name: 'International Physics Realm (IPhR) Best Ambassador',
+        rank: 'Top Ambassador (1st)',
+        detail: 'Helped 85+ colleagues find their passion in physics and participate in the IPhR securing high positions • Competed over 200+ ambassadors',
+        year: '2025',
+      },
+      {
+        name: 'Physics Brawl Online',
+        rank: '1st in Africa',
         detail: 'Category C • 50+ African teams',
         year: '2024',
-        color: 'from-green-500 to-emerald-600'
       },
-      { 
-        name: 'Online Physics Olympiad (OPhO)', 
-        rank: 'Top 10%', 
-        detail: '1,000+ participants from all grades',
+      {
+        name: 'Online Physics Olympiad (OPhO)',
+        rank: 'Top 10%',
+        detail: '1,000+ teams including Undergraduates',
         year: '2024',
-        color: 'from-blue-500 to-blue-600'
       }
     ]
   },
   {
     category: 'Programming & Tech',
     achievements: [
-      { 
-        name: 'DECI Geeks Competition', 
-        rank: '1st Place Egypt', 
-        detail: 'Digital Egypt Cubs Initiative • National Championship',
-        year: '2023',
-        color: 'from-purple-500 to-purple-600'
+      {
+        name: 'DECI Geeks Competition',
+        rank: '1st Place Egypt',
+        detail: 'Digital Egypt Cubs Initiative • National Championship over 14,000 Participants',
+        year: '2022',
       },
-      { 
-        name: 'Hack Club High Seas', 
-        rank: '15th Globally', 
-        detail: 'Most doubloons • Best projects ranking',
-        year: '2024',
-        color: 'from-cyan-500 to-blue-500'
+      {
+        name: 'ECPC',
+        rank: '12th Place Egypt',
+        detail: 'Egyptian Collegiate Programming Contest Qualifications • National Championship over 750 teams',
+        year: '2025',
       },
-      { 
-        name: 'Hack Club Winter', 
-        rank: '1st Daily Hours', 
-        detail: '620+ hours logged • Top achiever',
+      {
+        name: 'Hack Club High Seas',
+        rank: '5th Globally',
+        detail: 'Most doubloons • 850+ coding hours in only 3 month • Best projects ranking',
         year: '2024',
-        color: 'from-indigo-500 to-purple-500'
       }
     ]
   },
   {
     category: 'Mathematics',
     achievements: [
-      { 
-        name: 'International Math Bowl', 
-        rank: 'Top 2%', 
+      {
+        name: 'International Math Bowl',
+        rank: 'Top 2%',
         detail: '2,188 participants • 52 countries',
         year: '2024',
         color: 'from-red-500 to-pink-500'
+      }
+    ]
+  },
+  {
+    category: 'Chemistry',
+    achievements: [
+      {
+        name: 'Egyptian Chemistry Olympiad',
+        rank: '11th Place Egypt',
+        detail: '6,600+ participants • Practical & Theoratical Exams',
+        year: '2025',
+      },
+      {
+        name: 'Ultimate Reowned Chemist',
+        rank: '5th Place Globally (just a draft, the resutls are not yet out)',
+        detail: '1,000+ participants',
+        year: '2025',
       }
     ]
   }
@@ -111,8 +128,8 @@ const schoolhouseScores = [
 export default function ScoresAchievements() {
   const [selectedCategory, setSelectedCategory] = useState('all')
 
-  const filteredCompetitions = selectedCategory === 'all' 
-    ? competitions 
+  const filteredCompetitions = selectedCategory === 'all'
+    ? competitions
     : competitions.filter(comp => comp.category.toLowerCase().includes(selectedCategory))
 
   return (
@@ -132,7 +149,7 @@ export default function ScoresAchievements() {
             Academic Excellence
           </h2>
           <p className="text-lg md:text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto leading-relaxed">
-            A comprehensive look at my academic performance, standardized test scores, 
+            A comprehensive look at my academic performance, standardized test scores,
             and competition achievements that reflect my dedication to STEM excellence.
           </p>
         </motion.div>
@@ -179,11 +196,10 @@ export default function ScoresAchievements() {
             <button
               key={category}
               onClick={() => setSelectedCategory(category)}
-              className={`px-4 py-2 rounded-lg font-semibold transition-all duration-300 capitalize ${
-                selectedCategory === category
+              className={`px-4 py-2 rounded-lg font-semibold transition-all duration-300 capitalize ${selectedCategory === category
                   ? 'bg-black dark:bg-white text-white dark:text-black'
                   : 'bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-700'
-              }`}
+                }`}
             >
               {category} {category === 'all' ? 'competitions' : ''}
             </button>
@@ -245,13 +261,13 @@ export default function ScoresAchievements() {
         >
           <div className="text-center mb-8">
             <h3 className="text-2xl font-bold text-black dark:text-white mb-2">
-              School House Performance
+              School House Performance (Draft)
             </h3>
             <p className="text-gray-600 dark:text-gray-400">
               Khan Academy's peer tutoring platform • Mentee & Mentor roles
             </p>
           </div>
-          
+
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {schoolhouseScores.map((subject, index) => (
               <motion.div
@@ -264,9 +280,9 @@ export default function ScoresAchievements() {
               >
                 <div className="text-2xl mb-3">
                   {subject.subject === 'Physics' ? <BeakerIcon className="w-8 h-8 mx-auto text-black dark:text-white" /> :
-                   subject.subject === 'Computer Science' ? <CodeBracketIcon className="w-8 h-8 mx-auto text-black dark:text-white" /> :
-                   subject.subject === 'Mathematics' ? <ChartBarIcon className="w-8 h-8 mx-auto text-black dark:text-white" /> :
-                   <BookOpenIcon className="w-8 h-8 mx-auto text-orange-500" />}
+                    subject.subject === 'Computer Science' ? <CodeBracketIcon className="w-8 h-8 mx-auto text-black dark:text-white" /> :
+                      subject.subject === 'Mathematics' ? <ChartBarIcon className="w-8 h-8 mx-auto text-black dark:text-white" /> :
+                        <BookOpenIcon className="w-8 h-8 mx-auto dark:text-white" />}
                 </div>
                 <h4 className="font-bold text-black dark:text-white mb-2">{subject.subject}</h4>
                 <div className="space-y-2 text-sm">
@@ -279,36 +295,8 @@ export default function ScoresAchievements() {
           </div>
         </motion.div>
 
-        {/* Summary Stats */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.6 }}
-          className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-6"
-        >
-          <div className="text-center bg-black dark:bg-white text-white dark:text-black p-6 rounded-lg">
-            <TrophyIcon className="w-8 h-8 mx-auto mb-3" />
-            <div className="text-2xl font-bold mb-2">15+</div>
-            <div className="text-sm font-mono uppercase tracking-wider">Awards Won</div>
-          </div>
-          <div className="text-center bg-black dark:bg-white text-white dark:text-black p-6 rounded-lg">
-            <AcademicCapIcon className="w-8 h-8 mx-auto mb-3" />
-            <div className="text-2xl font-bold mb-2">3.9</div>
-            <div className="text-sm font-mono uppercase tracking-wider">Current GPA</div>
-          </div>
-          <div className="text-center bg-black dark:bg-white text-white dark:text-black p-6 rounded-lg">
-            <GlobeAltIcon className="w-8 h-8 mx-auto mb-3" />
-            <div className="text-2xl font-bold mb-2">1,180+</div>
-            <div className="text-sm font-mono uppercase tracking-wider">IPhR Competitors</div>
-          </div>
-          <div className="text-center bg-black dark:bg-white text-white dark:text-black p-6 rounded-lg">
-            <StarIcon className="w-8 h-8 mx-auto mb-3" />
-            <div className="text-2xl font-bold mb-2">Top 0.2%</div>
-            <div className="text-sm font-mono uppercase tracking-wider">STEM Entrance</div>
-          </div>
-        </motion.div>
-      </div>
+           </div>
+    
     </section>
   )
 }

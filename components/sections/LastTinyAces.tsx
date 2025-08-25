@@ -8,14 +8,7 @@ const achievements = [
     title: "Aced The Breakfast Paper",
     description: "Solved complex physics problems before my morning coffee got cold. Because apparently, quantum mechanics waits for no one.",
     date: "2024",
-    category: "Academic",
-  },
-  {
-    title: "Aced Physics Brawl Online",
-    description: "1st place in Africa and 34th globally in Category B of 2024, breaking the record for the highest score by an African participant.",
-    date: "2024",
-    category: "Competition",
-    link: "https://physicsbrawl.org/",
+    category: "Life",
   },
   {
     title: "Aced The Physics Club's Final Exam",
@@ -27,30 +20,6 @@ const achievements = [
     title: "Solved The Differential Equation that Made All of School Mates Cry",
     description: "While everyone else was having an existential crisis over calculus, I was having tea and solving differential equations.",
     date: "2024",
-    category: "Academic",
-  },
-  {
-    title: "International Physics Realm (IPhR) Gold Medal",
-    description: "5th place globally and became the top Ambassador by getting 85+ peers to participate. Not all heroes wear capes, some just carry calculators.",
-    date: "2024",
-    category: "Competition",
-  },
-  {
-    title: "DECI GEEKS Competition Champion",
-    description: "First place victory in the DIGITAL EGYPT CUBS INITIATIVE competition. Coding my way to the top, one algorithm at a time.",
-    date: "2024",
-    category: "Programming",
-  },
-  {
-    title: "ECPC Qualification",
-    description: "Qualified for the second round of the Egyptian Collegiate Programming Contest in both 2023 and 2024. Consistency is key!",
-    date: "2023-2024",
-    category: "Programming",
-  },
-  {
-    title: "Top 0.2% STEM High School Entrance",
-    description: "Survived the battle royale that was the STEM High School entrance exam. The jungle chose me.",
-    date: "2023",
     category: "Academic",
   },
 ];
@@ -69,7 +38,7 @@ export default function LastTinyAces() {
             className="text-center mb-16"
           >
             <h2 className="text-5xl md:text-6xl font-display font-bold text-black dark:text-white mb-6 leading-tight">
-              Last Tiny Aces
+              Last Tiny Things
             </h2>
             <p className="text-xl font-serif text-gray-700 dark:text-gray-300 max-w-3xl mx-auto">
               A collection of moments where I didn't completely embarrass myself. 

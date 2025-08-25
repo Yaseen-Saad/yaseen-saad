@@ -479,54 +479,58 @@ export default function ThoughtsPage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: index * 0.1 }}
               whileHover={{ scale: 1.02 }}
-              onClick={() => setSelectedPost(post.id)}
-              className="bg-gray-50 dark:bg-gray-900 border-2 border-gray-200 dark:border-gray-800 rounded-lg overflow-hidden cursor-pointer hover:border-black dark:hover:border-white transition-all duration-300"
+              className="bg-gray-50 dark:bg-gray-900 border-2 border-gray-200 dark:border-gray-800 rounded-lg overflow-hidden hover:border-black dark:hover:border-white transition-all duration-300 group"
             >
-              <div className="p-6">
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="text-gray-600 dark:text-gray-400">
-                    {post.icon}
-                  </div>
-                  <span className="px-3 py-1 bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-300 rounded-full text-xs font-medium">
-                    {post.category}
-                  </span>
-                </div>
-
-                <h2 className="text-xl font-bold text-black dark:text-white mb-3 leading-tight">
-                  {post.title}
-                </h2>
-
-                <p className="text-gray-600 dark:text-gray-400 mb-4 leading-relaxed">
-                  {post.excerpt}
-                </p>
-
-                <div className="flex items-center justify-between text-sm text-gray-500 dark:text-gray-500 mb-4">
-                  <div className="flex items-center gap-2">
-                    <CalendarIcon className="w-4 h-4" />
-                    {post.date}
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <ClockIcon className="w-4 h-4" />
-                    {post.readTime}
-                  </div>
-                </div>
-
-                <div className="flex flex-wrap gap-2">
-                  {post.tags.slice(0, 3).map((tag) => (
-                    <span
-                      key={tag}
-                      className="px-2 py-1 bg-black dark:bg-white text-white dark:text-black rounded text-xs"
-                    >
-                      #{tag}
+              <Link href={`/ysntksfst/${post.id}`} className="block">
+                <div className="p-6">
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="text-gray-600 dark:text-gray-400">
+                      {post.icon}
+                    </div>
+                    <span className="px-3 py-1 bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-300 rounded-full text-xs font-medium">
+                      {post.category}
                     </span>
-                  ))}
-                  {post.tags.length > 3 && (
-                    <span className="px-2 py-1 bg-gray-300 dark:bg-gray-700 text-gray-600 dark:text-gray-400 rounded text-xs">
-                      +{post.tags.length - 3}
-                    </span>
-                  )}
+                  </div>
+
+                  <h2 className="text-xl font-bold text-black dark:text-white mb-3 leading-tight group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
+                    {post.title}
+                  </h2>
+
+                  <p className="text-gray-600 dark:text-gray-400 mb-4 leading-relaxed">
+                    {post.excerpt}
+                  </p>
+
+                  <div className="flex items-center justify-between text-sm text-gray-500 dark:text-gray-500 mb-4">
+                    <div className="flex items-center gap-2">
+                      <CalendarIcon className="w-4 h-4" />
+                      {post.date}
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <ClockIcon className="w-4 h-4" />
+                      {post.readTime}
+                    </div>
+                  </div>
+
+                  <div className="flex items-center justify-between">
+                    <div className="flex flex-wrap gap-2">
+                      {post.tags.slice(0, 3).map((tag) => (
+                        <span
+                          key={tag}
+                          className="px-2 py-1 bg-black dark:bg-white text-white dark:text-black rounded text-xs"
+                        >
+                          #{tag}
+                        </span>
+                      ))}
+                      {post.tags.length > 3 && (
+                        <span className="px-2 py-1 bg-gray-300 dark:bg-gray-700 text-gray-600 dark:text-gray-400 rounded text-xs">
+                          +{post.tags.length - 3}
+                        </span>
+                      )}
+                    </div>
+                    <ArrowRightIcon className="w-4 h-4 text-gray-400 dark:text-gray-600 group-hover:text-black dark:group-hover:text-white group-hover:translate-x-1 transition-all" />
+                  </div>
                 </div>
-              </div>
+              </Link>
             </motion.article>
           ))}
         </div>

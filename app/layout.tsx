@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { Inter, Space_Mono } from 'next/font/google'
+import { Inter, Space_Mono, Orbitron } from 'next/font/google'
 import './globals.css'
 import { Providers } from './providers'
 import { ThemeProvider } from '@/components/theme/ThemeProvider'
@@ -12,6 +12,11 @@ const spaceMono = Space_Mono({
   subsets: ['latin'],
   weight: ['400', '700'],
   variable: '--font-space-mono'
+})
+const orbitron = Orbitron({ 
+  subsets: ['latin'],
+  weight: ['400', '700', '900'],
+  variable: '--font-orbitron'
 })
 
 export const metadata: Metadata = {
@@ -60,7 +65,7 @@ export default function RootLayout({
         <link rel="icon" href="/favicon.ico" />
         <meta name="theme-color" content="#000000" />
       </head>
-      <body className={`${inter.className} ${spaceMono.variable} bg-white dark:bg-black text-black dark:text-white transition-colors duration-300`}>
+      <body className={`${inter.className} ${spaceMono.variable} ${orbitron.variable} bg-white dark:bg-black text-black dark:text-white transition-colors duration-300`}>
         <ThemeProvider>
           <Providers>
             <ClientLoader />

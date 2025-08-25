@@ -68,7 +68,7 @@ export default function Loader({ isLoading }: { isLoading: boolean }) {
                   initial={{ y: 20, opacity: 0 }}
                   animate={{ y: 0, opacity: 1 }}
                   transition={{ delay: 0.5, duration: 0.6 }}
-                  className="text-3xl font-bold text-black dark:text-white font-yasoo"
+                  className="text-3xl font-bold text-black dark:text-white font-yasoo tracking-wider"
                 >
                   &lt; Yasoo /&gt;
                 </motion.h1>

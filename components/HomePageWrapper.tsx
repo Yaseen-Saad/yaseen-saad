@@ -8,7 +8,6 @@ import QuickGallery from '@/components/sections/QuickGallery';
 import ResourceLibrary from '@/components/sections/ResourceLibrary';
 import SideProjectsLab from '@/components/sections/SideProjectsLab';
 import QuantumThoughts from '@/components/sections/QuantumThoughts';
-import ScoresAchievements from '@/components/sections/ScoresAchievements';
 import MusicRapSection from '@/components/sections/MusicRapSection';
 import Loader from '@/components/ui/Loader';
 import LastBlogs from '@/components/sections/LastBlogs';
@@ -32,8 +31,6 @@ export default function HomePageWrapper() {
   return (
     <div className="min-h-screen">
       <Hero />
-      <ScoresAchievements />
-      <LastTinyAces />
       <MusicRapSection />
       <QuickGallery />
       <QuantumThoughts />
@@ -41,6 +38,7 @@ export default function HomePageWrapper() {
       <CurrentlyCooking />
       <ResourceLibrary />
       <LastBlogs />
+      <LastTinyAces />
     </div>
   );
 }
