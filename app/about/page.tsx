@@ -1,6 +1,5 @@
 import PersonalStory from '@/components/sections/PersonalStory';
 import Timeline from '@/components/sections/Timeline';
-import PhilosophyCorner from '@/components/sections/PhilosophyCorner';
 import DetailedGallery from '@/components/sections/DetailedGallery';
 import MyRapLines from '@/components/sections/MyRapLines';
 
@@ -15,7 +14,6 @@ export default function AboutPage() {
       <PersonalStory />
       <DetailedGallery />
       <Timeline />
-      <PhilosophyCorner />
       <MyRapLines />
     </div>
   );

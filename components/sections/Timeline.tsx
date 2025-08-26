@@ -14,12 +14,14 @@ import {
   GlobeAltIcon,
   BeakerIcon,
   CodeBracketIcon,
-  SparklesIcon
+  SparklesIcon,
+  CpuChipIcon,
+  CloudIcon
 } from '@heroicons/react/24/outline'
 
 const timelineEvents = [
   {
-    year: "2007",
+    year: "2008",
     title: "The Big Bang",
     subtitle: "My Universe Begins",
     description: "I was born in Saad Alexandria Hospital — I know it's weird (Saad), and I've taken my first breath in this universe. The irony of being born in a hospital with my own name wasn't lost on future me.",
@@ -28,67 +30,49 @@ const timelineEvents = [
     type: "life"
   },
   {
-    year: "2012",
-    title: "First First School Day",
-    subtitle: "Beginning of Academic Journey",
-    description: "I went to Corona Language School, where I spent a year at K1. First taste of structured learning, making friends, and realizing that naptime was actually pretty great.",
-    location: "Corona Language School",
-    icon: <AcademicCapIcon className="w-6 h-6" />,
-    type: "education"
-  },
-  {
-    year: "2013",
-    title: "Second First School Day",
-    subtitle: "New Environment, New Friends",
-    description: "I then moved to Abdelsalam El-Mahgoub Language School, where I tried to make some friends. Learning the art of adaptation and social navigation at a young age.",
-    location: "Abdelsalam El-Mahgoub Language School",
-    icon: <UserGroupIcon className="w-6 h-6" />,
-    type: "education"
-  },
-  {
-    year: "2014",
-    title: "The Big Jump",
-    subtitle: "Academic Acceleration",
-    description: "I was promoted from K2 to G2 directly without getting G1, yay! Early signs that traditional educational paths might not contain my curiosity and potential.",
-    location: "School Administration Decision",
-    icon: <RocketLaunchIcon className="w-6 h-6" />,
-    type: "achievement"
-  },
-  {
-    year: "2015",
-    title: "First Podium Break",
-    subtitle: "Academic Excellence Emerges",
-    description: "I've ranked in the top 10 of my class of 120+ other students. First taste of academic competition and the realization that hard work pays off.",
-    location: "Classroom Rankings",
-    icon: <TrophyIcon className="w-6 h-6" />,
-    type: "achievement"
-  },
-  {
     year: "2016",
-    title: "Third First School Day",
-    subtitle: "Finding My Academic Home",
-    description: "I then moved to Mohamed Fawzy El-Hofi Language School, the school I spent most of my formative years. This became the foundation of my educational journey.",
-    location: "Mohamed Fawzy El-Hofi Language School",
-    icon: <AcademicCapIcon className="w-6 h-6" />,
-    type: "education"
+    title: "Frontend Foundations",
+    subtitle: "HTML, CSS, and JavaScript",
+    description: "Started my programming journey by learning the basics of web development. Created my first static website and explored the magic of making things interactive with JavaScript.",
+    location: "Home Projects",
+    icon: <CodeBracketIcon className="w-6 h-6" />,
+    type: "technology"
+  },
+  {
+    year: "2017",
+    title: "Styling with SASS/SCSS",
+    subtitle: "Advanced CSS Techniques",
+    description: "Enhanced my frontend skills by mastering SASS/SCSS for modular and maintainable styles. Created dynamic and reusable stylesheets.",
+    location: "Personal Projects",
+    icon: <CodeBracketIcon className="w-6 h-6" />,
+    type: "technology"
   },
   {
     year: "2018",
-    title: "Student Council Leadership",
-    subtitle: "First Taste of Leadership",
-    description: "Joined Student Council and discovered my passion for organizing, leading, and making positive changes in the school community. Early leadership skills development.",
-    location: "School Student Council",
-    icon: <UserGroupIcon className="w-6 h-6" />,
-    type: "leadership"
+    title: "Advanced Frontend",
+    subtitle: "React and Modern CSS",
+    description: "Dove deeper into frontend development with React and modern CSS frameworks like Tailwind CSS. Built dynamic and responsive web applications.",
+    location: "Freelance Projects",
+    icon: <CodeBracketIcon className="w-6 h-6" />,
+    type: "technology"
+  },
+  {
+    year: "2019",
+    title: "Interactive Web Experiences",
+    subtitle: "jQuery and GSAP",
+    description: "Built interactive and animated web experiences using jQuery and GSAP. Focused on creating engaging user interfaces.",
+    location: "Freelance Projects",
+    icon: <CodeBracketIcon className="w-6 h-6" />,
+    type: "technology"
   },
   {
     year: "2020",
-    title: "COVID-19 Era",
-    subtitle: "Adaptation and Growth",
-    description: "I camped at home for a while, which helped me break into the top 10 again. Learned self-discipline, online learning, and discovered new passions during global uncertainty.",
-    location: "Home, Cairo",
-    icon: <GlobeAltIcon className="w-6 h-6" />,
-    type: "life"
+    title: "Full Stack Development",
+    subtitle: "Node.js and Databases",
+    description: "Expanded my skillset to backend development with Node.js, Express.js, and databases like MongoDB. Created full-stack applications and RESTful APIs.",
+    location: "Personal Projects",
+    icon: <CpuChipIcon className="w-6 h-6" />,
+    type: "technology"
   },
   {
     year: "2021",
@@ -97,6 +81,33 @@ const timelineEvents = [
     description: "Joined IEEE O6U as the youngest member. It was my first time joining a student activity. I was always the early bird, volunteering at the CS committee for that season.",
     location: "IEEE October 6 University Branch",
     icon: <CodeBracketIcon className="w-6 h-6" />,
+    type: "technology"
+  },
+  {
+    year: "2021",
+    title: "Backend Expansion",
+    subtitle: "Firebase and MongoDB",
+    description: "Integrated Firebase and MongoDB into my projects for real-time databases and scalable backend solutions.",
+    location: "Open Source Contributions",
+    icon: <CpuChipIcon className="w-6 h-6" />,
+    type: "technology"
+  },
+  {
+    year: "2022",
+    title: "Next.js and TypeScript",
+    subtitle: "Modern Web Development",
+    description: "Mastered Next.js for server-side rendering and TypeScript for type-safe development. Built scalable and performant web applications.",
+    location: "Open Source Contributions",
+    icon: <CodeBracketIcon className="w-6 h-6" />,
+    type: "technology"
+  },
+  {
+    year: "2023",
+    title: "Automation with n8n",
+    subtitle: "Workflow Automation",
+    description: "Leveraged n8n to automate workflows and integrate AI-driven tasks. Streamlined processes and improved efficiency.",
+    location: "STEM CS Club",
+    icon: <CloudIcon className="w-6 h-6" />,
     type: "technology"
   },
   {
@@ -136,21 +147,12 @@ const timelineEvents = [
     type: "achievement"
   },
   {
-    year: "2024",
+    year: "2023",
     title: "Programming Excellence",
     subtitle: "DECI GEEKS Victory",
     description: "Won 1st place in DECI GEEKS Competition under Digital Egypt Cubs Initiative. Validated my programming skills on a national level and opened tech industry connections.",
     location: "Digital Egypt Cubs Initiative",
     icon: <CodeBracketIcon className="w-6 h-6" />,
-    type: "technology"
-  },
-  {
-    year: "2024",
-    title: "EPhO Platform Launch",
-    subtitle: "Creating Educational Impact",
-    description: "Launched the Egyptian Physics Olympiad platform, serving 500+ students and revolutionizing physics competitions in Egypt. My largest technical and social impact project to date.",
-    location: "Online Platform",
-    icon: <RocketLaunchIcon className="w-6 h-6" />,
     type: "technology"
   },
   {
@@ -163,7 +165,7 @@ const timelineEvents = [
     type: "leadership"
   },
   {
-    year: "2024",
+    year: "2025",
     title: "College Application Journey",
     subtitle: "Aiming for the Stars",
     description: "Currently navigating US college applications, targeting top institutions with need-based aid. SAT prep, essays, and dreaming of studying physics and computer science at world-class universities.",
@@ -172,7 +174,7 @@ const timelineEvents = [
     type: "life"
   },
   {
-    year: "2025",
+    year: "2026",
     title: "The Next Chapter",
     subtitle: "Future Awaits",
     description: "Ready to take on new challenges, whether in college, research, or entrepreneurship. The universe is vast, and I'm just getting started with decoding it.",
@@ -323,13 +325,8 @@ export default function Timeline() {
           </div>
           <div className="text-center bg-black dark:bg-white text-white dark:text-black p-4 sm:p-6 rounded-lg">
             <TrophyIcon className="w-6 h-6 sm:w-8 sm:h-8 mx-auto mb-2 sm:mb-3" />
-            <div className="text-xl sm:text-2xl font-bold mb-1 sm:mb-2">{timelineEvents.filter(e => e.type === 'achievement').length}</div>
-            <div className="text-xs sm:text-sm font-mono uppercase tracking-wider">Major Achievements</div>
-          </div>
-          <div className="text-center bg-black dark:bg-white text-white dark:text-black p-4 sm:p-6 rounded-lg">
-            <AcademicCapIcon className="w-6 h-6 sm:w-8 sm:h-8 mx-auto mb-2 sm:mb-3" />
-            <div className="text-xl sm:text-2xl font-bold mb-1 sm:mb-2">{timelineEvents.filter(e => e.type === 'education').length}</div>
-            <div className="text-xs sm:text-sm font-mono uppercase tracking-wider">Educational Milestones</div>
+            <div className="text-xl sm:text-2xl font-bold mb-1 sm:mb-2">20+</div>
+            <div className="text-xs sm:text-sm font-mono uppercase tracking-wider">Tech Mastered</div>
           </div>
           <div className="text-center bg-black dark:bg-white text-white dark:text-black p-4 sm:p-6 rounded-lg">
             <SparklesIcon className="w-6 h-6 sm:w-8 sm:h-8 mx-auto mb-2 sm:mb-3" />
