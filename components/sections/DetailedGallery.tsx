@@ -1,10 +1,8 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import Image from 'next/image';
 import { useState } from 'react';
 import {
-  PhotoIcon,
   XMarkIcon,
   ChevronLeftIcon,
   ChevronRightIcon,
@@ -28,7 +26,6 @@ const photos: Photo[] = [
     id: 1,
     src: '/assets/images/gallery/IMG-20250826-WA0025.jpg',
     alt: 'Yaseen while testing the IPhR\'s Platform',
-    caption: 'Testing the IPhR\'s Anti-cheating System',
     title: 'Physics Competition Award Ceremony',
     description: 'Receiving recognition at the International Physics Realm competition where I achieved 5th place globally.',
     date: '2024-03-15',
@@ -39,7 +36,6 @@ const photos: Photo[] = [
     id: 2,
     src: '/assets/images/gallery/WhatsApp Image 2025-08-26 at 00.38.26_d86adad3.jpg',
     alt: 'Yaseen with his friend at his old school',
-    caption: 'My Friends at my very old school (I am on the left)',
     title: 'Physics Competition Award Ceremony',
     description: 'Receiving recognition at the International Physics Realm competition where I achieved 5th place globally.',
     date: '2024-03-15',
@@ -50,7 +46,6 @@ const photos: Photo[] = [
     id: 3,
     src: '/assets/images/gallery/websessionwithgalabia.png',
     alt: 'Yaseen in galabia style',
-    caption: 'An Online Session with the Web Development Track at STEM CSC',
     title: 'Web Development Track Session',
     description: 'Participating in an online session focused on web development skills.',
     date: '2024-03-15',
@@ -61,7 +56,6 @@ const photos: Photo[] = [
     id: 4,
     src: '/assets/images/gallery/physicsclubexam2024.jpg',
     alt: 'Physics club exam',
-    caption: 'Me Eating while Acing the Physics Club\'s Final Exam (I am wearing red at the left)',
     title: 'Physics Club Examination Day',
     description: 'Intensive physics problem-solving session during club activities and training.',
     date: '2024-03-15',
@@ -122,7 +116,6 @@ const photos: Photo[] = [
     id: 11,
     src: '/assets/images/gallery/scrapyardphotowithibrahim.jpg',
     alt: 'Yaseen with Ibrahim at the scrapyard',
-    caption: 'A memorable day at the scrapyard with Ibrahim',
     title: 'Scrapyard Adventures',
     description: 'Exploring the scrapyard with Ibrahim, discovering hidden treasures and enjoying the day.',
     date: '2025-08-26',
@@ -133,7 +126,6 @@ const photos: Photo[] = [
     id: 12,
     src: '/assets/images/gallery/chillingwiththegalabiaintheclassroom.jpg',
     alt: 'Yaseen chilling with the galabia in the classroom',
-    caption: 'Relaxing in the classroom with the galabia',
     title: 'Classroom Moments',
     description: 'A lighthearted moment in the classroom, embracing the galabia style.',
     date: '2025-08-26',
@@ -144,7 +136,6 @@ const photos: Photo[] = [
     id: 13,
     src: '/assets/images/gallery/discoveringthedesertswithmyfriends.jpg',
     alt: 'Yaseen discovering the deserts with friends',
-    caption: 'Exploring the vast deserts with my friends',
     title: 'Desert Adventures',
     description: 'An unforgettable journey through the deserts, sharing laughs and discoveries with friends.',
     date: '2025-08-26',
@@ -155,7 +146,6 @@ const photos: Photo[] = [
     id: 14,
     src: '/assets/images/gallery/firstfieldtripatcairouniversitywithcolleage(Iamontheleft).jpg',
     alt: 'Yaseen on his first field trip at Cairo University with colleagues',
-    caption: 'First field trip at Cairo University (I am on the left)',
     title: 'Cairo University Field Trip',
     description: 'A memorable first field trip at Cairo University, exploring the campus and bonding with colleagues.',
     date: '2025-08-26',
@@ -166,7 +156,6 @@ const photos: Photo[] = [
     id: 15,
     src: '/assets/images/gallery/meandmysophomprefriendafterfinishingourmidterms(wearedeepfroed).jpg',
     alt: 'Yaseen and his sophomore friend after finishing midterms',
-    caption: 'Celebrating midterms completion with my sophomore friend (we are deep-fried)',
     title: 'Midterms Celebration',
     description: 'A fun and lighthearted moment after completing our midterms, captured in a deep-fried style.',
     date: '2025-08-26',
