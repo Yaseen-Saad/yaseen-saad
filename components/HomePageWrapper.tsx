@@ -30,7 +30,6 @@ export default function HomePageWrapper() {
     <div className="min-h-screen">
       <Hero />
       <MusicRapSection />
-      <LastBlogs />
       <QuickGallery />
       <QuantumThoughts />
       <LastTinyAces />

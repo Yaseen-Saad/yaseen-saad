@@ -2,9 +2,9 @@
 
 import React, { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
-import { 
-  LightBulbIcon, 
-  BeakerIcon, 
+import {
+  LightBulbIcon,
+  BeakerIcon,
   PuzzlePieceIcon,
   BookOpenIcon,
   StarIcon,
@@ -16,27 +16,17 @@ import {
 const quantumThoughts = [
   {
     id: 'multiverse-dreams',
-    category: 'Physics Musings',
-    thought: "If every decision creates a parallel universe, there's a version of me who actually understood quantum mechanics on the first try.",
+    category: 'Science',
+    thought: "If every decision creates a parallel universe, there's a version of me who actually understood electromagnetic waves on the first try.",
     depth: 'Deep',
-    field: 'Quantum Physics',
-    date: '2024-12-17',
+    field: 'Physics',
+    date: '2024-10-17',
     icon: <ArrowPathIcon className="w-5 h-5" />,
     color: 'from-blue-500 to-purple-600'
   },
   {
-    id: 'code-consciousness',
-    category: 'Tech Philosophy',
-    thought: "Every line of code is a thought crystallized. Programming isn't just problem-solving; it's externalized thinking.",
-    depth: 'Medium',
-    field: 'Computer Science',
-    date: '2024-12-15',
-    icon: <LightBulbIcon className="w-5 h-5" />,
-    color: 'from-green-500 to-teal-600'
-  },
-  {
     id: 'universe-debug',
-    category: 'Cosmic Debugging',
+    category: 'Science',
     thought: "What if dark matter is just the universe's equivalent of commented-out code that nobody wants to delete?",
     depth: 'Shower Thought',
     field: 'Astrophysics',
@@ -46,7 +36,7 @@ const quantumThoughts = [
   },
   {
     id: 'ai-consciousness',
-    category: 'AI Ethics',
+    category: 'Life',
     thought: "If AI becomes conscious, will it experience imposter syndrome when it realizes it's 'just' pattern matching?",
     depth: 'Deep',
     field: 'Artificial Intelligence',
@@ -54,43 +44,22 @@ const quantumThoughts = [
     icon: <QuestionMarkCircleIcon className="w-5 h-5" />,
     color: 'from-orange-500 to-red-600'
   },
-  {
-    id: 'learning-paradox',
-    category: 'Education Philosophy',
-    thought: "The more I learn, the more I realize how little I know. But that's not discouraging—it's exhilarating!",
-    depth: 'Reflective',
-    field: 'Learning',
-    date: '2024-12-05',
-    icon: <BookOpenIcon className="w-5 h-5" />,
-    color: 'from-teal-500 to-blue-600'
-  },
-  {
-    id: 'time-coding',
-    category: 'Time Perception',
-    thought: "Time moves differently when coding. 5 minutes debugging feels like 5 hours, but 5 hours building something cool feels like 5 minutes.",
-    depth: 'Relatable',
-    field: 'Programming',
-    date: '2024-12-03',
-    icon: <PuzzlePieceIcon className="w-5 h-5" />,
-    color: 'from-indigo-500 to-purple-600'
-  }
 ]
 
 const thoughtCategories = [
   'All Thoughts',
-  'Physics Musings', 
-  'Tech Philosophy', 
-  'Cosmic Debugging', 
-  'AI Ethics', 
-  'Education Philosophy',
-  'Time Perception'
+  'Science',
+  'Religon',
+  'STEM Schools',
+  'Life',
+  'Philosophy',
 ]
 
 export default function QuantumThoughts() {
   const [selectedCategory, setSelectedCategory] = useState('All Thoughts')
 
-  const filteredThoughts = selectedCategory === 'All Thoughts' 
-    ? quantumThoughts 
+  const filteredThoughts = selectedCategory === 'All Thoughts'
+    ? quantumThoughts
     : quantumThoughts.filter(thought => thought.category === selectedCategory)
 
   const getDepthColor = (depth: string) => {
@@ -114,11 +83,11 @@ export default function QuantumThoughts() {
           className="text-center mb-12"
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-6 text-black dark:text-white">
-            
+
             Mind Fragments
           </h2>
           <p className="text-lg md:text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto leading-relaxed">
-            Random thoughts, philosophical musings, and "shower thoughts" about physics, 
+            Random thoughts, philosophical musings, and "shower thoughts" about physics,
             programming, and the universe. My brain's debug console, basically.
           </p>
         </motion.div>
@@ -129,11 +98,10 @@ export default function QuantumThoughts() {
             <button
               key={category}
               onClick={() => setSelectedCategory(category)}
-              className={`px-4 py-2 rounded-lg font-medium transition-all duration-300 text-sm ${
-                selectedCategory === category
-                  ? 'bg-black dark:bg-white text-white dark:text-black'
-                  : 'bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-700'
-              }`}
+              className={`px-4 py-2 rounded-lg font-medium transition-all duration-300 text-sm ${selectedCategory === category
+                ? 'bg-black dark:bg-white text-white dark:text-black'
+                : 'bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-700'
+                }`}
             >
               {category}
             </button>
@@ -208,55 +176,12 @@ export default function QuantumThoughts() {
               <QuestionMarkCircleIcon className="w-6 h-6 mb-3" />
               <h4 className="font-bold mb-2 text-sm">Philosophy Corner</h4>
               <p className="text-xs leading-relaxed mb-3">
-                "The real question isn't whether machines think, but whether humans do." 
+                "The real question isn't whether machines think, but whether humans do."
                 - B.F. Skinner (but also me, when debugging at 3 AM)
               </p>
             </div>
           </div>
         </div>
-
-        {/* Inspiration Sources */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.6 }}
-          className="mt-12"
-        >
-          <h3 className="text-2xl font-bold text-center mb-6 text-black dark:text-white">
-            Where These Thoughts Come From
-          </h3>
-          <div className="grid md:grid-cols-4 gap-4">
-            <div className="text-center">
-              <div className="w-12 h-12 bg-black dark:bg-white rounded-full flex items-center justify-center mx-auto mb-2">
-                <BeakerIcon className="w-6 h-6 text-white dark:text-black" />
-              </div>
-              <h4 className="font-medium text-black dark:text-white mb-1 text-sm">Shower Time</h4>
-              <p className="text-xs text-gray-600 dark:text-gray-400">Where all the best ideas happen</p>
-            </div>
-            <div className="text-center">
-              <div className="w-12 h-12 bg-black dark:bg-white rounded-full flex items-center justify-center mx-auto mb-2">
-                <LightBulbIcon className="w-6 h-6 text-white dark:text-black" />
-              </div>
-              <h4 className="font-medium text-black dark:text-white mb-1 text-sm">Coding Sessions</h4>
-              <p className="text-xs text-gray-600 dark:text-gray-400">3 AM debugging wisdom</p>
-            </div>
-            <div className="text-center">
-              <div className="w-12 h-12 bg-black dark:bg-white rounded-full flex items-center justify-center mx-auto mb-2">
-                <BookOpenIcon className="w-6 h-6 text-white dark:text-black" />
-              </div>
-              <h4 className="font-medium text-black dark:text-white mb-1 text-sm">Reading</h4>
-              <p className="text-xs text-gray-600 dark:text-gray-400">Physics papers & philosophy</p>
-            </div>
-            <div className="text-center">
-              <div className="w-12 h-12 bg-black dark:bg-white rounded-full flex items-center justify-center mx-auto mb-2">
-                <StarIcon className="w-6 h-6 text-white dark:text-black" />
-              </div>
-              <h4 className="font-medium text-black dark:text-white mb-1 text-sm">Stargazing</h4>
-              <p className="text-xs text-gray-600 dark:text-gray-400">Contemplating the cosmos</p>
-            </div>
-          </div>
-        </motion.div>
       </div>
     </section>
   )

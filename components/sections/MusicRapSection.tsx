@@ -30,7 +30,7 @@ const favoriteArtists = [
     icon: <MicrophoneIcon className="w-6 h-6" />
   },
   {
-    name: 'Abyusif',
+      name: 'Abyusif',
     genre: 'Egyptian Rap',
     topSongs: ['Hal Di Kat Hayatak', 'Talata Zayaha', '3azra2eel', 'Mesa', 'Kol 7aga Tamam'],
     description: 'Raw energy and authentic street rap from Cairo.',
@@ -38,42 +38,12 @@ const favoriteArtists = [
     icon: <SpeakerWaveIcon className="w-6 h-6" />
   },
   {
-    name: 'El Koker',
+    name: 'El Joker',
     genre: 'Egyptian Rap',
     topSongs: ['Hamesh El Samt', 'Fasla', 'Enfsam 7ad', 'Enfsam 7ad II', 'El Ra2sa El Akhira', 'Nafs El 7aga', 'Ezdwageyit El Ma3ayier', '24 2irat', 'Symphonia', 'Sokan El Leel', 'Forsa Tania'],
     description: 'The king of story telling and phylosphy, this man\'s bars ain\'t understandable at all.',
     color: 'from-gray-500 to-gray-700',
     icon: <SpeakerWaveIcon className="w-6 h-6" />
-  },
-  {
-    name: 'Legy-ce',
-    genre: 'Egyptian Rap',
-    topSongs: [
-      'Fatnazia',
-      'Tharthara',
-      'Zero',
-      'FTrouh Lmeen',
-      'Fe Elgaleed',
-      'El 3alam El Sefly',
-      'El 7ob El 3azaly',
-    ],
-    description: 'The legend of Legy-ce, his discography is endless and his style is unique. The man with the most songs in the Egyptian rap scene.',
-    color: 'from-gray-800 to-black',
-    icon: <StarIcon className="w-6 h-6" />
-  },
-  {
-    name: 'Karim Osama',
-    genre: 'Egyptian Rap',
-    topSongs: [
-      'El Maseer',
-      'El 7ob El Akher',
-      'El 3alam El Sefly',
-      'El 7ob El 3azaly',
-      'El Tareeq',
-    ],
-    description: 'Karim Osama brings a unique poetic style to Egyptian rap, blending deep lyrics with powerful delivery.',
-    color: 'from-gray-700 to-gray-900',
-    icon: <MicrophoneIcon className="w-6 h-6" />
   },
   {
     name: 'Arsenik',
@@ -83,14 +53,44 @@ const favoriteArtists = [
     color: 'from-gray-700 to-gray-900',
     icon: <MicrophoneIcon className="w-6 h-6" />
   },
-  {
-    name: 'Ahmed Santa',
-    genre: 'Egyptian Rap',
-    topSongs: ['Santa Monica', 'El Donya', 'El 7ob', 'El 3alam', 'El Tareeq'],
-    description: 'Ahmed Santa is a rising star in the Egyptian rap scene, known for his catchy beats and relatable lyrics.',
-    color: 'from-gray-600 to-gray-800',
-    icon: <MicrophoneIcon className="w-6 h-6" />
-  },
+  // {
+  //   name: 'Legy-ce',
+  //   genre: 'Egyptian Rap',
+  //   topSongs: [
+  //     'Fatnazia',
+  //     'Tharthara',
+  //     'Zero',
+  //     'FTrouh Lmeen',
+  //     'Fe Elgaleed',
+  //     'El 3alam El Sefly',
+  //     'El 7ob El 3azaly',
+  //   ],
+  //   description: 'The legend of Legy-ce, his discography is endless and his style is unique. The man with the most songs in the Egyptian rap scene.',
+  //   color: 'from-gray-800 to-black',
+  //   icon: <StarIcon className="w-6 h-6" />
+  // },
+  // {
+  //   name: 'Karim Osama',
+  //   genre: 'Egyptian Rap',
+  //   topSongs: [
+  //     'El Maseer',
+  //     'El 7ob El Akher',
+  //     'El 3alam El Sefly',
+  //     'El 7ob El 3azaly',
+  //     'El Tareeq',
+  //   ],
+  //   description: 'Karim Osama brings a unique poetic style to Egyptian rap, blending deep lyrics with powerful delivery.',
+  //   color: 'from-gray-700 to-gray-900',
+  //   icon: <MicrophoneIcon className="w-6 h-6" />
+  // },
+  // {
+  //   name: 'Ahmed Santa',
+  //   genre: 'Egyptian Rap',
+  //   topSongs: ['Santa Monica', 'El Donya', 'El 7ob', 'El 3alam', 'El Tareeq'],
+  //   description: 'Ahmed Santa is a rising star in the Egyptian rap scene, known for his catchy beats and relatable lyrics.',
+  //   color: 'from-gray-600 to-gray-800',
+  //   icon: <MicrophoneIcon className="w-6 h-6" />
+  // },
 ]
 
 const currentPlaylist = [

@@ -1,26 +1,47 @@
 'use client';
 
+
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 
-const currentProjects = [
+type Project = {
+  title: string;
+  subtitle: string;
+  description: string;
+  status: string;
+  progress: number;
+  image?: string | false;
+  tech: string[];
+  link?: string;
+};
+
+const currentProjects: Project[] = [
   {
-    title: "EPhO",
-    subtitle: "The Egyptian Physics Olympiad",
-    description: "Building the platform for Egypt's first-ever Physics Olympiad. Because apparently, Egypt needed someone to organize the chaos of competitive physics.",
+    title: "My personal statement",
+    subtitle: "Working on my p.s. for college apps",
+    description: "Working on building my personal statement for college apps, with cohesive narrative and these stuff, probably writing about my journey with self trust (I am just so cooked).",
     status: "In Development",
-    progress: 75,
-    link: "https://epho.net",
-    tech: ["Next.js", "Firebase", "Competition Platform"],
+    progress: 5,
+    image: false,
+    tech: ["Applying to College", "Personal Qualities", "Writing"],
   },
   {
-    title: "Hack Club High Seas Rewards",
-    subtitle: "iPad I am on the way",
-    description: "Sailing through the High Seas to earn enough doubloons for that sweet iPad. Currently plotting my course to treasure island.",
+    title: "SAT Vocabulary Helper",
+    subtitle: "Making English vocab less painful",
+    description: "Building a tool to help myself and others master SAT vocabulary, with spaced repetition and fun mnemonics. English words are cooking me, so I'm cooking back!",
+    status: "Prototype",
+    progress: 20,
+    image: false,
+    tech: ["SAT Prep", "Vocabulary", "Spaced Repetition", "Mnemonics"],
+  },
+  {
+    title: "Preparing for the SAT (Target 1500+)",
+    subtitle: "English is just cooking me",
+    description: "Grinding for a 1500+ SAT score. Focusing on English, reading, and writing sections. Practice, practice, and more practice.",
     status: "Active",
-    progress: 60,
-    link: "https://highseas.hackclub.com/",
-    tech: ["Open Source", "Community", "Hustle"],
+    progress: 35,
+    image: false,
+    tech: ["SAT Prep", "English", "Practice", "Test Strategy"],
   },
   {
     title: "Computational Astrophysics Paper",
@@ -139,26 +160,25 @@ export default function CurrentlyCooking() {
                 </div>
 
                 {/* Visual representation */}
-                <div className="flex-shrink-0">
-                  <div className="w-80 h-64 bg-white dark:bg-black border-2 border-black dark:border-white p-6 flex flex-col justify-center items-center shadow-lg">
-                    <div className="text-6xl mb-4 text-black dark:text-white">
-                      {index === 0 && <div className="w-16 h-16 border-4 border-current rounded-full flex items-center justify-center text-lg font-bold">1</div>}
-                      {index === 1 && <div className="w-16 h-16 border-4 border-current rounded-full flex items-center justify-center text-lg font-bold">2</div>}
-                      {index === 2 && <div className="w-16 h-16 border-4 border-current rounded-full flex items-center justify-center text-lg font-bold">3</div>}
-                      {index === 3 && <div className="w-16 h-16 border-4 border-current rounded-full flex items-center justify-center text-lg font-bold">4</div>}
-                    </div>
-                    <div className="text-center">
-                      <h5 className="font-bold text-black dark:text-white mb-2">{project.title}</h5>
-                      <div className="w-full h-1 bg-gray-200 dark:bg-gray-700 mb-2">
-                        <div 
-                          className="h-full bg-black dark:bg-white transition-all duration-1000"
-                          style={{ width: `${project.progress}%` }}
-                        />
+                {project.image ? (
+                  <div className="flex-shrink-0">
+                    <div className="w-80 h-64 bg-white dark:bg-black border-2 border-black dark:border-white p-6 flex flex-col justify-center items-center shadow-lg">
+                      {typeof project.image === 'string' && project.image.length > 0 && (
+                        <img src={project.image} alt={project.title} className="w-full h-40 object-cover mb-4 rounded-lg" />
+                      )}
+                      <div className="text-center">
+                        <h5 className="font-bold text-black dark:text-white mb-2">{project.title}</h5>
+                        <div className="w-full h-1 bg-gray-200 dark:bg-gray-700 mb-2">
+                          <div 
+                            className="h-full bg-black dark:bg-white transition-all duration-1000"
+                            style={{ width: `${project.progress}%` }}
+                          />
+                        </div>
+                        <p className="text-sm font-mono text-gray-600 dark:text-gray-400">{project.status}</p>
                       </div>
-                      <p className="text-sm font-mono text-gray-600 dark:text-gray-400">{project.status}</p>
                     </div>
                   </div>
-                </div>
+                ) : null}
               </motion.div>
             ))}
           </div>
