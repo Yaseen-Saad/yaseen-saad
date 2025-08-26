@@ -20,40 +20,23 @@ const skills = [
     description: "I create modern, scalable web applications using Next.js, TypeScript, and cutting-edge technologies. From concept to deployment, I handle the entire development lifecycle.",
     icon: <CodeBracketIcon className="w-8 h-8" />,
     highlights: [
-      "500+ users on EPhO Platform",
-      "110+ students taught web development",
-      "Zero downtime on production apps",
-      "Modern tech stack mastery"
+      "5000+ users on multi-platforms",
+      "60+ students taught web development",
+      "Modern tech stack (MERN) mastery",
+      "4+ Years of Experience ",
     ],
-    techStack: ["Next.js", "TypeScript", "React", "Node.js", "Firebase", "Tailwind CSS"],
+    techStack: ["Next.js", "TypeScript", "Express.js", "MongoDb", "Firebase", "Tailwind CSS"],
     gradient: "from-gray-700 to-black"
-  },
-  {
-    title: "Physics Research & AI Integration",
-    subtitle: "Where Science Meets Computation",
-    description: "I bridge the gap between theoretical physics and practical AI applications, creating models that solve real scientific problems with unprecedented accuracy.",
-    icon: <BeakerIcon className="w-8 h-8" />,
-    highlights: [
-      "96% accuracy in stellar predictions",
-      "1000x faster than traditional methods",
-      "5th place globally in Physics competitions",
-      "Published research contributions"
-    ],
-    techStack: ["Python", "TensorFlow", "NumPy", "Jupyter", "Astropy", "Machine Learning"],
-    gradient: "from-gray-600 to-gray-800"
   },
   {
     title: 'Generative AI Development',
     description: 'Creating innovative solutions using generative AI technologies to solve complex problems.',
     icon: <BeakerIcon className="w-8 h-8" />,
     highlights: [
-      "Developed AI models for art and music generation",
-      "Pioneered text-to-image synthesis techniques",
-      "Contributed to open-source generative AI projects",
-      "Presented at AI and Creativity conferences"
+      "Profficent in image-to-text techniques",
     ],
     techStack: ["Python", "TensorFlow", "PyTorch", "OpenAI API", "Hugging Face Transformers"],
-    gradient: "from-purple-600 to-pink-600"
+    gradient: "from-gray-700 to-black"
   },
   {
     title: 'AI Automations with n8n',
@@ -61,38 +44,29 @@ const skills = [
     icon: <BeakerIcon className="w-8 h-8" />,
     highlights: [
       "Streamlined data processing pipelines",
-      "Automated machine learning model training",
+      "Developed AI workflows for Vocals and music generation",
+      "Built Multiple Autonomus AI Agents",
       "Integrated AI services with existing applications",
-      "Reduced operational costs by 30%"
     ],
     techStack: ["n8n", "Node.js", "JavaScript", "REST APIs", "Webhooks"],
-    gradient: "from-green-600 to-blue-600"
-  },
-  {
-    title: 'Chemistry Research',
-    description: 'Conducting in-depth research in the field of chemistry, exploring new compounds and reactions.',
-    icon: <BeakerIcon className="w-8 h-8" />,
-    highlights: [
-      "Discovered two new chemical compounds",
-      "Published in peer-reviewed chemistry journals",
-      "Presented research at international chemistry conferences",
-      "Collaborated with leading chemists and researchers"
-    ],
-    techStack: ["ChemOffice", "Gaussian", "Python", "Jupyter", "Machine Learning"],
-    gradient: "from-red-600 to-yellow-600"
+    gradient: "from-gray-700 to-black"
   },
   {
     title: 'Capstone and Research Projects (Engineering)',
     description: 'Leading and contributing to engineering capstone and research projects with innovative solutions.',
     icon: <AcademicCapIcon className="w-8 h-8" />,
     highlights: [
-      "Designed a solar-powered water purification system",
+      "Designed a solar-powered autonomous water purification system with IoT",
       "Developed a smart irrigation system using IoT",
-      "Led a team of 5 in an engineering design project",
-      "Presented projects to industry leaders and professors"
+      "Developed a smart air purification system using IoT",
+      "Developed a Dam Prototype",
+      "Developed a Pioneering Water Heating Technology With Zero-Carbon-Footprint and without electricity",
+      "Led 5 teams of 5 in an engineering projects getting A+ grades",
+      "Secured an A+ Grade in all Engineering Projects and 1st Place all over all STEM Schools"
     ],
-    techStack: ["SolidWorks", "MATLAB", "Arduino", "Raspberry Pi", "IoT"],
-    gradient: "from-teal-600 to-blue-800"
+    techStack: ["SolidWorks", "Sketch Up", "Arduino", "Raspberry Pi", "IoT"],
+
+    gradient: "from-gray-700 to-black"
   },
   {
     title: 'Philosophical Debate',
@@ -105,7 +79,7 @@ const skills = [
       "Organized philosophy discussion groups"
     ],
     techStack: ["Ethics", "Critical Thinking", "Debate", "Philosophy"],
-    gradient: "from-yellow-500 to-orange-500"
+    gradient: "from-gray-700 to-black"
   },
   {
     title: 'Guidance for STEM Students',
@@ -118,7 +92,7 @@ const skills = [
       "Organized workshops on STEM topics"
     ],
     techStack: ["Mentorship", "STEM Education", "Workshops", "Career Guidance"],
-    gradient: "from-blue-500 to-green-500"
+    gradient: "from-gray-700 to-black"
   },
 ]
 

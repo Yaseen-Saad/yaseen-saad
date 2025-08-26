@@ -221,7 +221,7 @@ export default function TechStackShowcase() {
           className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-6"
         >
           <div className="text-center bg-black dark:bg-white text-white dark:text-black p-6 rounded-lg">
-            <div className="text-3xl font-bold mb-2">500+</div>
+            <div className="text-3xl font-bold mb-2">2500+</div>
             <div className="text-sm font-mono uppercase tracking-wider">Hours Coding</div>
           </div>
           <div className="text-center bg-black dark:bg-white text-white dark:text-black p-6 rounded-lg">
@@ -229,11 +229,11 @@ export default function TechStackShowcase() {
             <div className="text-sm font-mono uppercase tracking-wider">Stack Overflow Visits</div>
           </div>
           <div className="text-center bg-black dark:bg-white text-white dark:text-black p-6 rounded-lg">
-            <div className="text-3xl font-bold mb-2">20+</div>
+            <div className="text-3xl font-bold mb-2">90+</div>
             <div className="text-sm font-mono uppercase tracking-wider">Projects Built</div>
           </div>
           <div className="text-center bg-black dark:bg-white text-white dark:text-black p-6 rounded-lg">
-            <div className="text-3xl font-bold mb-2">3</div>
+            <div className="text-3xl font-bold mb-2">7</div>
             <div className="text-sm font-mono uppercase tracking-wider">Years Learning</div>
           </div>
         </motion.div>

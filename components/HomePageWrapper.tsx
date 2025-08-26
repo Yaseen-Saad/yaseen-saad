@@ -2,7 +2,6 @@
 
 import { useState, useEffect } from 'react';
 import Hero from '@/components/sections/Hero';
-import LastTinyAces from '@/components/sections/LastTinyAces';
 import CurrentlyCooking from '@/components/sections/CurrentlyCooking';
 import QuickGallery from '@/components/sections/QuickGallery';
 import QuantumThoughts from '@/components/sections/QuantumThoughts';
@@ -32,7 +31,6 @@ export default function HomePageWrapper() {
       <MusicRapSection />
       <QuickGallery />
       <QuantumThoughts />
-      <LastTinyAces />
       <CurrentlyCooking />
     </div>
   );

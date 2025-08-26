@@ -15,7 +15,6 @@ export default function SkillsPage() {
       <ScoresAchievements />
       <TechStackShowcase />
       <YouMayNeedMe />
-      <DigitalPlayground />
     </div>
-  );
+    );
 }

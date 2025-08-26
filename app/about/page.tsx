@@ -13,8 +13,8 @@ export default function AboutPage() {
     <div className="min-h-screen pt-20">
       <PersonalStory />
       <DetailedGallery />
-      <Timeline />
       <MyRapLines />
+      <Timeline />
     </div>
   );
 }

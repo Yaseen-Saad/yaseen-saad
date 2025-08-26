@@ -182,30 +182,20 @@ export default function QuantumThoughts() {
             </div>
           </div>
         </div>
-        
-        {/* Call to Action */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="text-center mt-16"
-        >
-          <div className="bg-black dark:bg-white text-white dark:text-black rounded-lg p-8 max-w-2xl mx-auto">
-            <h3 className="text-2xl font-bold mb-4">Let's Think Together</h3>
-            <p className="mb-6 opacity-90">
-              Have thoughts on any of these topics? Disagree with my perspectives? 
-              I'd love to hear your take and engage in meaningful dialogue.
+                  <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+            viewport={{ once: true }}
+            className="mt-12 text-center"
+          >
+            <blockquote className="text-2xl md:text-3xl font-serif italic text-gray-700 dark:text-gray-300 max-w-4xl mx-auto border-l-4 border-black dark:border-white pl-8 text-left">
+              "Jack of all trades, master of none, but better than a master of one."
+            </blockquote>
+            <p className="text-sm font-mono text-gray-500 dark:text-gray-400 mt-4 uppercase tracking-wider">
+              — My Life Philosophy
             </p>
-            <motion.a
-              href="mailto:yaseen@yasoo.me"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="inline-block bg-white dark:bg-black text-black dark:text-white px-6 py-3 rounded-lg font-semibold transition-colors duration-300 hover:bg-gray-100 dark:hover:bg-gray-900"
-            >
-              Start a Conversation
-            </motion.a>
-          </div>
-        </motion.div>
+          </motion.div>
 
       </div>
     </section>
