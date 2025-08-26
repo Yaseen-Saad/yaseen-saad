@@ -437,24 +437,22 @@ export default function ThoughtsPage() {
   }
 
   return (
-    <div className="min-h-screen pt-20 px-4 sm:px-6 lg:px-8 bg-white dark:bg-black">
+    <div className="min-h-screen pt-20 mt-16 px-4 sm:px-6 lg:px-8 bg-white dark:bg-black">
       <div className="max-w-7xl mx-auto">
-        <motion.div
+  <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           className="text-center mb-16"
         >
           <h1 className="text-4xl md:text-6xl font-bold mb-6 text-black dark:text-white">
-            Thoughts & Reflections
+            YSNTKSFST: Yaseen Talks Fast
           </h1>
           <p className="text-lg md:text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto leading-relaxed">
-            My digital journal where I process the chaos of being a teenager trying to understand 
-            physics, technology, leadership, and life. Raw thoughts, lessons learned, and random musings. 💭✨
+            The name "Yaseen Talks Fast" comes from my unique ability to speak 1000x faster than the average person. It's not just a name; it's a reflection of my energy and passion for communication.
           </p>
         </motion.div>
-
-        {/* Category Filter */}
-        <div className="flex flex-wrap justify-center gap-3 mb-12">
+     
+        {/* <div className="flex flex-wrap justify-center gap-3 mb-12">
           {categories.map((category) => (
             <button
               key={category}
@@ -470,7 +468,6 @@ export default function ThoughtsPage() {
           ))}
         </div>
 
-        {/* Blog Posts Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {filteredPosts.map((post, index) => (
             <motion.article
@@ -535,7 +532,6 @@ export default function ThoughtsPage() {
           ))}
         </div>
 
-        {/* Writing Stats */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -562,7 +558,7 @@ export default function ThoughtsPage() {
             <div className="text-2xl font-bold mb-2">∞</div>
             <div className="text-sm font-mono uppercase tracking-wider">Ideas</div>
           </div>
-        </motion.div>
+        </motion.div> */}
       </div>
     </div>
   )

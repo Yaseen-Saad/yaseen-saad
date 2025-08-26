@@ -131,10 +131,18 @@ export default function ArchivePage() {
     : archiveItems.filter(item => item.category === selectedCategory)
 
   return (
-    <div className="min-h-screen pt-20 px-4 sm:px-6 lg:px-8 bg-white dark:bg-black">
+    <div className="min-h-screen mt-12 pt-20 px-4 sm:px-6 lg:px-8 bg-white dark:bg-black">
       <div className="max-w-7xl mx-auto">
-        {/* Header */}
         <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          className="text-center mb-16"
+        >
+          <h1 className="text-4xl md:text-6xl font-bold mb-6 text-black dark:text-white">
+            Comming Soon
+            </h1>
+          </motion.div>
+                {/* <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           className="text-center mb-16"
@@ -149,7 +157,6 @@ export default function ArchivePage() {
           </p>
         </motion.div>
 
-        {/* Category Filter */}
         <div className="flex flex-wrap justify-center gap-3 mb-12">
           {categories.map((category) => (
             <button
@@ -166,7 +173,6 @@ export default function ArchivePage() {
           ))}
         </div>
 
-        {/* Archive Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {filteredItems.map((item, index) => (
             <motion.div
@@ -178,7 +184,6 @@ export default function ArchivePage() {
               onClick={() => setSelectedItem(selectedItem === item.id ? null : item.id)}
               className="bg-gray-50 dark:bg-gray-900 border-2 border-gray-200 dark:border-gray-800 rounded-lg overflow-hidden cursor-pointer hover:border-black dark:hover:border-white transition-all duration-300"
             >
-              {/* Item Header */}
               <div className={`${item.color} text-white p-6`}>
                 <div className="flex items-center justify-between mb-4">
                   {item.icon}
@@ -193,7 +198,6 @@ export default function ArchivePage() {
                 </div>
               </div>
 
-              {/* Item Content */}
               <div className="p-6">
                 <p className="text-gray-700 dark:text-gray-300 mb-4 leading-relaxed">
                   {item.description}
@@ -210,7 +214,6 @@ export default function ArchivePage() {
                   </div>
                 </div>
 
-                {/* Expanded File List */}
                 {selectedItem === item.id && (
                   <motion.div
                     initial={{ opacity: 0, height: 0 }}
@@ -249,7 +252,6 @@ export default function ArchivePage() {
           ))}
         </div>
 
-        {/* Archive Stats */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -278,7 +280,6 @@ export default function ArchivePage() {
           </div>
         </motion.div>
 
-        {/* Download Notice */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -294,8 +295,8 @@ export default function ArchivePage() {
               Knowledge grows when shared!
             </p>
           </div>
-        </motion.div>
-      </div>
+        </motion.div> */}
+      </div> 
     </div>
   )
 }

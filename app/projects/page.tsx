@@ -2,9 +2,9 @@
 
 import React, { useState } from 'react'
 import { motion } from 'framer-motion'
-import { 
-  CodeBracketIcon, 
-  GlobeAltIcon, 
+import {
+  CodeBracketIcon,
+  GlobeAltIcon,
   BeakerIcon,
   RocketLaunchIcon,
   CpuChipIcon,
@@ -327,8 +327,8 @@ export default function ProjectsPage() {
   const [selectedCategory, setSelectedCategory] = useState('All')
   const [selectedProject, setSelectedProject] = useState<string | null>(null)
 
-  const filteredProjects = selectedCategory === 'All' 
-    ? projects 
+  const filteredProjects = selectedCategory === 'All'
+    ? projects
     : projects.filter(project => project.category === selectedCategory)
 
   const selectedProjectData = projects.find(p => p.id === selectedProject)
@@ -347,30 +347,29 @@ export default function ProjectsPage() {
           {/* Project Header */}
           <div className="mb-12">
             <div className="mb-8">
-              <img 
+              <img
                 src={selectedProjectData.image}
                 alt={selectedProjectData.title}
                 className="w-full h-64 md:h-80 object-cover rounded-lg border-2 border-gray-200 dark:border-gray-800"
               />
             </div>
-            
+
             <div className="flex items-center gap-4 mb-4">
               <span className="px-3 py-1 bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 rounded-full text-sm font-medium">
                 {selectedProjectData.category}
               </span>
-              <span className={`px-3 py-1 rounded-full text-sm font-medium ${
-                selectedProjectData.status === 'Live & Growing' || selectedProjectData.status === 'Successfully Completed' 
-                  ? 'bg-green-100 dark:bg-green-900 text-green-700 dark:text-green-300'
-                  : 'bg-yellow-100 dark:bg-yellow-900 text-yellow-700 dark:text-yellow-300'
-              }`}>
+              <span className={`px-3 py-1 rounded-full text-sm font-medium ${selectedProjectData.status === 'Live & Growing' || selectedProjectData.status === 'Successfully Completed'
+                ? 'bg-green-100 dark:bg-green-900 text-green-700 dark:text-green-300'
+                : 'bg-yellow-100 dark:bg-yellow-900 text-yellow-700 dark:text-yellow-300'
+                }`}>
                 {selectedProjectData.status}
               </span>
             </div>
-            
+
             <h1 className="text-4xl md:text-5xl font-bold text-black dark:text-white mb-4">
               {selectedProjectData.title}
             </h1>
-            
+
             <p className="text-xl text-gray-600 dark:text-gray-400 mb-6">
               {selectedProjectData.subtitle}
             </p>
@@ -454,7 +453,7 @@ export default function ProjectsPage() {
                 ))}
               </div>
             </div>
-            
+
             <div>
               <h3 className="text-xl font-bold text-black dark:text-white mb-4">Key Features</h3>
               <ul className="space-y-2">
@@ -490,9 +489,18 @@ export default function ProjectsPage() {
   }
 
   return (
-    <div className="min-h-screen pt-20 px-4 sm:px-6 lg:px-8 bg-white dark:bg-black">
+    <div className="min-h-screen mt-16 pt-20 px-4 sm:px-6 lg:px-8 bg-white dark:bg-black">
       <div className="max-w-7xl mx-auto">
-        {/* Header */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          className="text-center mb-16"
+        >
+          <h1 className="text-4xl md:text-6xl font-bold mb-6 text-black dark:text-white">
+            Comming Soon
+          </h1>
+        </motion.div>
+        {/* 
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -511,8 +519,6 @@ export default function ProjectsPage() {
             each project represents a challenge conquered and lessons learned.
           </p>
         </motion.div>
-
-        {/* Category Filter */}
         <div className="flex flex-wrap justify-center gap-3 mb-12">
           {categories.map((category) => (
             <button
@@ -528,8 +534,6 @@ export default function ProjectsPage() {
             </button>
           ))}
         </div>
-
-        {/* Projects Grid */}
         <div className="grid lg:grid-cols-2 gap-8 mb-16">
           {filteredProjects.map((project, index) => (
             <motion.div
@@ -602,7 +606,6 @@ export default function ProjectsPage() {
           ))}
         </div>
 
-        {/* Project Stats */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -629,7 +632,7 @@ export default function ProjectsPage() {
             <div className="text-2xl font-bold mb-2">96%</div>
             <div className="text-sm font-mono uppercase tracking-wider">Satisfaction Rate</div>
           </div>
-        </motion.div>
+        </motion.div> */}
       </div>
     </div>
   )
