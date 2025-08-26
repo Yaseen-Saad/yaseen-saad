@@ -2,10 +2,10 @@
 
 import React, { useState } from 'react'
 import { motion } from 'framer-motion'
-import { 
-  CodeBracketIcon, 
-  CpuChipIcon, 
-  CloudIcon, 
+import {
+  CodeBracketIcon,
+  CpuChipIcon,
+  CloudIcon,
   CommandLineIcon,
   StarIcon,
   AcademicCapIcon
@@ -18,12 +18,18 @@ const techCategories = [
     icon: <CodeBracketIcon className="w-8 h-8" />,
     description: 'Making pixels dance and users smile',
     technologies: [
-      { name: 'React', level: 90, color: 'bg-blue-500', years: 2 },
-      { name: 'Next.js', level: 85, color: 'bg-gray-800', years: 1.5 },
+      { name: 'HTML', level: 100, color: 'bg-orange-500', years: 7 },
+      { name: 'CSS', level: 100, color: 'bg-orange-500', years: 7 },
+      { name: 'SASS/SCSS', level: 90, color: 'bg-orange-500', years: 5 },
+      { name: 'Bootstrap/Tailwind CSS', level: 95, color: 'bg-cyan-500', years: 2 },
+      { name: 'JavaScript', level: 95, color: 'bg-orange-500', years: 6 },
+      { name: 'jQuery', level: 80, color: 'bg-blue-700', years: 5 },
       { name: 'TypeScript', level: 80, color: 'bg-blue-600', years: 1 },
-      { name: 'Tailwind CSS', level: 95, color: 'bg-cyan-500', years: 2 },
-      { name: 'Framer Motion', level: 75, color: 'bg-purple-500', years: 1 },
-      { name: 'HTML/CSS', level: 98, color: 'bg-orange-500', years: 3 }
+      { name: 'three.js', level: 70, color: 'bg-indigo-500', years: 2 },
+      { name: 'React', level: 90, color: 'bg-blue-500', years: 2 },
+      { name: 'GSAP', level: 40, color: 'bg-orange-500', years: 3 },
+      { name: 'Next.js', level: 85, color: 'bg-gray-800', years: 1.5 },
+      { name: 'Jest', level: 60, color: 'bg-pink-400', years: 1 },
     ]
   },
   {
@@ -32,41 +38,62 @@ const techCategories = [
     icon: <CpuChipIcon className="w-8 h-8" />,
     description: 'Server-side magic and database dancing',
     technologies: [
-      { name: 'Node.js', level: 85, color: 'bg-green-600', years: 2 },
-      { name: 'Python', level: 90, color: 'bg-yellow-500', years: 3 },
       { name: 'Firebase', level: 80, color: 'bg-orange-400', years: 1.5 },
-      { name: 'MongoDB', level: 70, color: 'bg-green-500', years: 1 },
+      { name: 'Node.js', level: 85, color: 'bg-green-600', years: 2 },
       { name: 'Express.js', level: 75, color: 'bg-gray-600', years: 1.5 },
-      { name: 'PostgreSQL', level: 65, color: 'bg-blue-400', years: 0.5 }
+      { name: 'MongoDB', level: 70, color: 'bg-green-500', years: 1 },
+      { name: 'Vercel', level: 60, color: 'bg-black', years: 1 },
+      { name: 'MySQL', level: 60, color: 'bg-blue-300', years: 1 },
+      { name: 'Socket.io', level: 65, color: 'bg-yellow-600', years: 1 },
+      { name: 'Supabase', level: 60, color: 'bg-green-700', years: 1 },
+      { name: 'Prisma', level: 65, color: 'bg-purple-700', years: 1 },
+      { name: 'Django', level: 80, color: 'bg-green-700', years: 1 },
+      { name: 'Flask', level: 75, color: 'bg-gray-700', years: 1 },
     ]
   },
   {
-    id: 'tools',
-    title: 'Developer Arsenal',
-    icon: <CommandLineIcon className="w-8 h-8" />,
-    description: 'Tools that make me a coding ninja',
-    technologies: [
-      { name: 'Git & GitHub', level: 90, color: 'bg-gray-700', years: 3 },
-      { name: 'VS Code', level: 95, color: 'bg-blue-500', years: 3 },
-      { name: 'Linux Terminal', level: 80, color: 'bg-black', years: 2 },
-      { name: 'Docker', level: 60, color: 'bg-blue-400', years: 0.5 },
-      { name: 'Figma', level: 75, color: 'bg-purple-400', years: 1 },
-      { name: 'Postman', level: 70, color: 'bg-orange-500', years: 1 }
-    ]
-  },
-  {
-    id: 'physics',
-    title: 'Physics Computing',
+    id: 'computational-science',
+    title: 'Computational Science',
     icon: <AcademicCapIcon className="w-8 h-8" />,
-    description: 'Where physics meets programming',
+    description: 'Solving scientific problems with code and data.',
     technologies: [
-      { name: 'MATLAB', level: 75, color: 'bg-orange-600', years: 2 },
-      { name: 'NumPy/SciPy', level: 80, color: 'bg-blue-300', years: 1.5 },
-      { name: 'Matplotlib', level: 85, color: 'bg-red-500', years: 2 },
+      { name: 'Python', level: 90, color: 'bg-yellow-500', years: 3 },
+      { name: 'NumPy', level: 85, color: 'bg-blue-300', years: 2 },
+      { name: 'SciPy', level: 80, color: 'bg-blue-400', years: 2 },
+      { name: 'SymPy', level: 55, color: 'bg-green-700', years: 1 },
       { name: 'Jupyter', level: 90, color: 'bg-orange-400', years: 2 },
+      { name: 'Pandas', level: 80, color: 'bg-green-400', years: 2 },
+      { name: 'Matplotlib', level: 85, color: 'bg-red-500', years: 2 },
+      { name: 'Wolfram Mathematica', level: 50, color: 'bg-red-700', years: 1 },
       { name: 'LaTeX', level: 70, color: 'bg-green-400', years: 1 },
-      { name: 'Wolfram Alpha', level: 85, color: 'bg-red-600', years: 3 }
     ]
+  },
+  {
+    id: 'automations-n8n',
+    title: 'Automations with n8n',
+    icon: <CloudIcon className="w-8 h-8" />,
+    description: 'Automating workflows and integrating AI-driven tasks.',
+    technologies: [
+      { name: 'n8n', level: 85, color: 'bg-green-600', years: 1 },
+      { name: 'Node.js', level: 80, color: 'bg-green-500', years: 2 },
+      { name: 'REST APIs', level: 75, color: 'bg-blue-400', years: 2 },
+      { name: 'Webhooks', level: 70, color: 'bg-gray-600', years: 1 },
+      { name: 'Zapier', level: 30, color: 'bg-yellow-400', years: 1 },
+      { name: 'IFTTT', level: 65, color: 'bg-blue-300', years: 1 },
+      { name: 'Make.com', level: 65, color: 'bg-blue-300', years: 1 },
+      { name: 'Google Apps Script', level: 60, color: 'bg-green-400', years: 1 },
+      { name: 'Slack Bots', level: 55, color: 'bg-blue-500', years: 0.5 },
+    ]
+  },
+  {
+    id: 'ui-ux',
+    title: 'UI/UX',
+    icon: <StarIcon className="w-8 h-8" />,
+    description: 'Designing beautiful and intuitive user experiences.',
+    technologies: [
+      { name: 'Figma', level: 85, color: 'bg-purple-400', years: 2 },
+      { name: 'Adobe Photoshop', level: 70, color: 'bg-pink-400', years: 1 },
+     ]
   }
 ]
 
@@ -90,8 +117,8 @@ export default function TechStackShowcase() {
             Tech Stack Showcase
           </h2>
           <p className="text-lg md:text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto leading-relaxed">
-            My digital arsenal - the languages, frameworks, and tools I wield to transform 
-            caffeine into code and ideas into reality. Each skill bar represents countless 
+            My digital arsenal - the languages, frameworks, and tools I wield to transform
+            caffeine into code and ideas into reality. Each skill bar represents countless
             hours of debugging, learning, and occasional triumphant "It works!" moments.
           </p>
         </motion.div>
@@ -108,21 +135,19 @@ export default function TechStackShowcase() {
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
               onClick={() => setSelectedCategory(category.id)}
-              className={`p-6 rounded-lg border-2 transition-all duration-300 text-left ${
-                selectedCategory === category.id
-                  ? 'border-black dark:border-white bg-black dark:bg-white text-white dark:text-black'
-                  : 'border-gray-200 dark:border-gray-800 hover:border-black dark:hover:border-white bg-white dark:bg-black'
-              }`}
+              className={`p-6 rounded-lg border-2 transition-all duration-300 text-left ${selectedCategory === category.id
+                ? 'border-black dark:border-white bg-black dark:bg-white text-white dark:text-black'
+                : 'border-gray-200 dark:border-gray-800 hover:border-black dark:hover:border-white bg-white dark:bg-black'
+                }`}
             >
               <div className="flex items-center gap-3 mb-3">
                 {category.icon}
                 <h3 className="font-bold text-lg">{category.title}</h3>
               </div>
-              <p className={`text-sm ${
-                selectedCategory === category.id 
-                  ? 'text-gray-300 dark:text-gray-700' 
-                  : 'text-gray-600 dark:text-gray-400'
-              }`}>
+              <p className={`text-sm ${selectedCategory === category.id
+                ? 'text-gray-300 dark:text-gray-700'
+                : 'text-gray-600 dark:text-gray-400'
+                }`}>
                 {category.description}
               </p>
             </motion.button>
@@ -156,7 +181,7 @@ export default function TechStackShowcase() {
                     <span className="text-sm font-bold text-black dark:text-white">{tech.level}%</span>
                   </div>
                 </div>
-                
+
                 <div className="relative">
                   <div className="w-full h-3 bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden">
                     <motion.div
@@ -174,7 +199,7 @@ export default function TechStackShowcase() {
                       )}
                     </motion.div>
                   </div>
-                  
+
                   {/* Skill level indicators */}
                   <div className="flex justify-between mt-1 text-xs text-gray-500 dark:text-gray-500">
                     <span>Beginner</span>
@@ -224,8 +249,8 @@ export default function TechStackShowcase() {
             <StarIcon className="w-8 h-8 mx-auto mb-4 text-yellow-500" />
             <h3 className="text-xl font-bold mb-4 text-black dark:text-white">The Journey Continues</h3>
             <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
-              Every percentage point represents late nights, debugging sessions, and those magical moments 
-              when everything finally clicks. I'm not just learning technologies—I'm building the tools 
+              Every percentage point represents late nights, debugging sessions, and those magical moments
+              when everything finally clicks. I'm not just learning technologies—I'm building the tools
               to change the world, one line of code at a time.
             </p>
           </div>

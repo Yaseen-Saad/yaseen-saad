@@ -12,9 +12,9 @@ export const metadata = {
 export default function SkillsPage() {
   return (
     <div className="min-h-screen pt-20">
-  <ScoresAchievements />
-      <YouMayNeedMe />
+      <ScoresAchievements />
       <TechStackShowcase />
+      <YouMayNeedMe />
       <DigitalPlayground />
     </div>
   );

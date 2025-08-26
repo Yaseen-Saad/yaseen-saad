@@ -44,7 +44,6 @@ const currentProjects = [
 export default function CurrentlyCooking() {
   return (
     <section className="py-24 bg-gray-50 dark:bg-gray-900 relative">
-      <div className="absolute inset-0 bg-paper opacity-[0.02]"></div>
       
       <div className="container mx-auto px-6">
         <div className="max-w-6xl mx-auto">

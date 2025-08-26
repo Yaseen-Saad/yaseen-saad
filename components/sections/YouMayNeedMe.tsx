@@ -2,9 +2,9 @@
 
 import React from 'react'
 import { motion } from 'framer-motion'
-import { 
-  CodeBracketIcon, 
-  BeakerIcon, 
+import {
+  CodeBracketIcon,
+  BeakerIcon,
   LightBulbIcon,
   AcademicCapIcon,
   RocketLaunchIcon,
@@ -41,7 +41,85 @@ const skills = [
     ],
     techStack: ["Python", "TensorFlow", "NumPy", "Jupyter", "Astropy", "Machine Learning"],
     gradient: "from-gray-600 to-gray-800"
-  }
+  },
+  {
+    title: 'Generative AI Development',
+    description: 'Creating innovative solutions using generative AI technologies to solve complex problems.',
+    icon: <BeakerIcon className="w-8 h-8" />,
+    highlights: [
+      "Developed AI models for art and music generation",
+      "Pioneered text-to-image synthesis techniques",
+      "Contributed to open-source generative AI projects",
+      "Presented at AI and Creativity conferences"
+    ],
+    techStack: ["Python", "TensorFlow", "PyTorch", "OpenAI API", "Hugging Face Transformers"],
+    gradient: "from-purple-600 to-pink-600"
+  },
+  {
+    title: 'AI Automations with n8n',
+    description: 'Building efficient workflows and automations using the n8n platform for AI-driven tasks.',
+    icon: <BeakerIcon className="w-8 h-8" />,
+    highlights: [
+      "Streamlined data processing pipelines",
+      "Automated machine learning model training",
+      "Integrated AI services with existing applications",
+      "Reduced operational costs by 30%"
+    ],
+    techStack: ["n8n", "Node.js", "JavaScript", "REST APIs", "Webhooks"],
+    gradient: "from-green-600 to-blue-600"
+  },
+  {
+    title: 'Chemistry Research',
+    description: 'Conducting in-depth research in the field of chemistry, exploring new compounds and reactions.',
+    icon: <BeakerIcon className="w-8 h-8" />,
+    highlights: [
+      "Discovered two new chemical compounds",
+      "Published in peer-reviewed chemistry journals",
+      "Presented research at international chemistry conferences",
+      "Collaborated with leading chemists and researchers"
+    ],
+    techStack: ["ChemOffice", "Gaussian", "Python", "Jupyter", "Machine Learning"],
+    gradient: "from-red-600 to-yellow-600"
+  },
+  {
+    title: 'Capstone and Research Projects (Engineering)',
+    description: 'Leading and contributing to engineering capstone and research projects with innovative solutions.',
+    icon: <AcademicCapIcon className="w-8 h-8" />,
+    highlights: [
+      "Designed a solar-powered water purification system",
+      "Developed a smart irrigation system using IoT",
+      "Led a team of 5 in an engineering design project",
+      "Presented projects to industry leaders and professors"
+    ],
+    techStack: ["SolidWorks", "MATLAB", "Arduino", "Raspberry Pi", "IoT"],
+    gradient: "from-teal-600 to-blue-800"
+  },
+  {
+    title: 'Philosophical Debate',
+    description: 'Engaging in thought-provoking philosophical discussions, exploring ethics, technology, and the human condition.',
+    icon: <LightBulbIcon className="w-8 h-8" />,
+    highlights: [
+      "Facilitated debates on ethics and technology",
+      "Explored philosophical intersections with science",
+      "Encouraged critical thinking through open dialogue",
+      "Organized philosophy discussion groups"
+    ],
+    techStack: ["Ethics", "Critical Thinking", "Debate", "Philosophy"],
+    gradient: "from-yellow-500 to-orange-500"
+  },
+  {
+    title: 'Guidance for STEM Students',
+    description: 'Providing mentorship and guidance to STEM high school students, fostering their academic and personal growth.',
+    icon: <AcademicCapIcon className="w-8 h-8" />,
+    highlights: [
+      "Mentored STEM students at 6th of October High School",
+      "Guided students in critical thinking exercises",
+      "Supported students in academic and career planning",
+      "Organized workshops on STEM topics"
+    ],
+    techStack: ["Mentorship", "STEM Education", "Workshops", "Career Guidance"],
+    gradient: "from-blue-500 to-green-500"
+  },
 ]
 
 const reasons = [
@@ -82,7 +160,7 @@ export default function YouMayNeedMe() {
             You May Need Me If...
           </h2>
           <p className="text-lg md:text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto leading-relaxed">
-            I specialize in turning complex challenges into elegant solutions. 
+            I specialize in turning complex challenges into solutions.
             Whether you need cutting-edge development or innovative research, I bring both technical expertise and creative thinking.
           </p>
         </motion.div>

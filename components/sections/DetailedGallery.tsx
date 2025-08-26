@@ -220,7 +220,6 @@ export default function DetailedGallery() {
   return (
     <>
       <section id="gallery" className="py-24 bg-gray-50 dark:bg-gray-900 relative">
-        <div className="absolute inset-0 bg-paper opacity-[0.02]"></div>
 
         <div className="container mx-auto px-6">
           <div className="max-w-7xl mx-auto">
@@ -357,7 +356,7 @@ export default function DetailedGallery() {
                 </div>
                 <div className="p-4">
                   <div className="text-3xl font-bold text-black dark:text-white mb-1">
-                    3
+                    2
                   </div>
                   <div className="text-sm text-gray-600 dark:text-gray-400 font-mono uppercase tracking-wider">
                     Years Documented

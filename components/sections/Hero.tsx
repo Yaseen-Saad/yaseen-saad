@@ -146,7 +146,7 @@ export default function Hero() {
             <div className="text-xs font-mono uppercase tracking-wider mb-1 opacity-70">
               Currently Doing
             </div>
-            <div className="text-sm font-medium">
+            <div className="  text-sm font-medium">
               {mostRecentActivity.activity}
             </div>
             <div className="absolute top-3 -right-1 w-2 h-2 bg-black dark:bg-white rotate-45"></div>
@@ -166,7 +166,7 @@ export default function Hero() {
             >
               <div className="w-40 h-40 sm:w-48 sm:h-48 md:w-56 md:h-56 lg:w-64 lg:h-64 rounded-full overflow-hidden border-4 border-black dark:border-white shadow-2xl group-hover:shadow-3xl transition-all duration-300 group-hover:scale-105">
                 <Image
-                  src="/assets/images/Yaseen Saad Eldin Formall.jpg"
+                  src="/assets/images/gallery/Yaseen Saad-Eldin.jpg"
                   alt="Yaseen Saad-Eldin"
                   width={256}
                   height={256}
