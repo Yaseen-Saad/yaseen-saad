@@ -5,7 +5,6 @@ import Hero from '@/components/sections/Hero';
 import LastTinyAces from '@/components/sections/LastTinyAces';
 import CurrentlyCooking from '@/components/sections/CurrentlyCooking';
 import QuickGallery from '@/components/sections/QuickGallery';
-import SideProjectsLab from '@/components/sections/SideProjectsLab';
 import QuantumThoughts from '@/components/sections/QuantumThoughts';
 import MusicRapSection from '@/components/sections/MusicRapSection';
 import Loader from '@/components/ui/Loader';
@@ -34,9 +33,8 @@ export default function HomePageWrapper() {
       <LastBlogs />
       <QuickGallery />
       <QuantumThoughts />
-      <CurrentlyCooking />
       <LastTinyAces />
-      <SideProjectsLab />
+      <CurrentlyCooking />
     </div>
   );
 }
