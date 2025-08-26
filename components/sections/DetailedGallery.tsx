@@ -3,13 +3,13 @@
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import { useState } from 'react';
-import { 
-  PhotoIcon, 
-  XMarkIcon, 
-  ChevronLeftIcon, 
+import {
+  PhotoIcon,
+  XMarkIcon,
+  ChevronLeftIcon,
   ChevronRightIcon,
   CalendarIcon,
-  TagIcon 
+  TagIcon
 } from '@heroicons/react/24/outline';
 
 interface Photo {
@@ -26,6 +26,50 @@ interface Photo {
 const photos: Photo[] = [
   {
     id: 1,
+    src: '/assets/images/gallery/IMG-20250826-WA0025.jpg',
+    alt: 'Yaseen while testing the IPhR\'s Platform',
+    caption: 'Testing the IPhR\'s Anti-cheating System',
+    title: 'Physics Competition Award Ceremony',
+    description: 'Receiving recognition at the International Physics Realm competition where I achieved 5th place globally.',
+    date: '2024-03-15',
+    category: 'Awards',
+    tags: ['physics', 'competition', 'achievement', 'formal']
+  },
+  {
+    id: 2,
+    src: '/assets/images/gallery/WhatsApp Image 2025-08-26 at 00.38.26_d86adad3.jpg',
+    alt: 'Yaseen with his friend at his old school',
+    caption: 'My Friends at my very old school (I am on the left)',
+    title: 'Physics Competition Award Ceremony',
+    description: 'Receiving recognition at the International Physics Realm competition where I achieved 5th place globally.',
+    date: '2024-03-15',
+    category: 'Awards',
+    tags: ['physics', 'competition', 'achievement', 'formal']
+  },
+  {
+    id: 3,
+    src: '/assets/images/gallery/websessionwithgalabia.png',
+    alt: 'Yaseen in galabia style',
+    caption: 'An Online Session with the Web Development Track at STEM CSC',
+    title: 'Web Development Track Session',
+    description: 'Participating in an online session focused on web development skills.',
+    date: '2024-03-15',
+    category: 'Education',
+    tags: ['web development', 'online learning', 'STEM']
+  },
+  {
+    id: 4,
+    src: '/assets/images/gallery/physicsclubexam2024.jpg',
+    alt: 'Physics club exam',
+    caption: 'Me Eating while Acing the Physics Club\'s Final Exam (I am wearing red at the left)',
+    title: 'Physics Club Examination Day',
+    description: 'Intensive physics problem-solving session during club activities and training.',
+    date: '2024-03-15',
+    category: 'Academic',
+    tags: ['physics club', 'exam', 'problem solving', 'concentration']
+  },
+  {
+    id: 5,
     src: '/public/assets/images/Yaseen Saad Eldin Formall.jpg',
     alt: 'Yaseen at formal event',
     title: 'Physics Competition Award Ceremony',
@@ -35,7 +79,7 @@ const photos: Photo[] = [
     tags: ['physics', 'competition', 'achievement', 'formal']
   },
   {
-    id: 2,
+    id: 6,
     src: '/public/assets/images/physicsbrawl.jpg',
     alt: 'Physics Brawl competition',
     title: 'Physics Brawl 2024 Victory',
@@ -45,7 +89,7 @@ const photos: Photo[] = [
     tags: ['physics brawl', 'africa', 'record', 'teamwork']
   },
   {
-    id: 3,
+    id: 7,
     src: '/public/assets/images/firsttoeat.jpg',
     alt: 'First to eat challenge',
     title: 'STEM School Cafeteria Adventures',
@@ -55,17 +99,7 @@ const photos: Photo[] = [
     tags: ['STEM school', 'friends', 'daily life', 'fun']
   },
   {
-    id: 4,
-    src: '/public/assets/images/physicsclubexam.jpg',
-    alt: 'Physics club exam',
-    title: 'Physics Club Examination Day',
-    description: 'Intensive physics problem-solving session during club activities and training.',
-    date: '2023-10-15',
-    category: 'Academic',
-    tags: ['physics club', 'exam', 'problem solving', 'concentration']
-  },
-  {
-    id: 5,
+    id: 9,
     src: '/public/assets/images/56440868230.jpg',
     alt: 'Random moment',
     title: 'Candid Moment',
@@ -75,7 +109,7 @@ const photos: Photo[] = [
     tags: ['candid', 'personality', 'authentic']
   },
   {
-    id: 6,
+    id: 10,
     src: '/public/assets/images/de.jpg',
     alt: 'Digital Egypt event',
     title: 'Digital Egypt Cubs Initiative',
@@ -83,19 +117,79 @@ const photos: Photo[] = [
     date: '2024-01-12',
     category: 'Technology',
     tags: ['DECI', 'coding', 'initiative', 'technology']
+  },
+  {
+    id: 11,
+    src: '/assets/images/gallery/scrapyardphotowithibrahim.jpg',
+    alt: 'Yaseen with Ibrahim at the scrapyard',
+    caption: 'A memorable day at the scrapyard with Ibrahim',
+    title: 'Scrapyard Adventures',
+    description: 'Exploring the scrapyard with Ibrahim, discovering hidden treasures and enjoying the day.',
+    date: '2025-08-26',
+    category: 'Personal',
+    tags: ['scrapyard', 'adventure', 'friendship']
+  },
+  {
+    id: 12,
+    src: '/assets/images/gallery/chillingwiththegalabiaintheclassroom.jpg',
+    alt: 'Yaseen chilling with the galabia in the classroom',
+    caption: 'Relaxing in the classroom with the galabia',
+    title: 'Classroom Moments',
+    description: 'A lighthearted moment in the classroom, embracing the galabia style.',
+    date: '2025-08-26',
+    category: 'School Life',
+    tags: ['classroom', 'galabia', 'relaxation']
+  },
+  {
+    id: 13,
+    src: '/assets/images/gallery/discoveringthedesertswithmyfriends.jpg',
+    alt: 'Yaseen discovering the deserts with friends',
+    caption: 'Exploring the vast deserts with my friends',
+    title: 'Desert Adventures',
+    description: 'An unforgettable journey through the deserts, sharing laughs and discoveries with friends.',
+    date: '2025-08-26',
+    category: 'Adventure',
+    tags: ['desert', 'friends', 'exploration']
+  },
+  {
+    id: 14,
+    src: '/assets/images/gallery/firstfieldtripatcairouniversitywithcolleage(Iamontheleft).jpg',
+    alt: 'Yaseen on his first field trip at Cairo University with colleagues',
+    caption: 'First field trip at Cairo University (I am on the left)',
+    title: 'Cairo University Field Trip',
+    description: 'A memorable first field trip at Cairo University, exploring the campus and bonding with colleagues.',
+    date: '2025-08-26',
+    category: 'Education',
+    tags: ['field trip', 'Cairo University', 'colleagues']
+  },
+  {
+    id: 15,
+    src: '/assets/images/gallery/meandmysophomprefriendafterfinishingourmidterms(wearedeepfroed).jpg',
+    alt: 'Yaseen and his sophomore friend after finishing midterms',
+    caption: 'Celebrating midterms completion with my sophomore friend (we are deep-fried)',
+    title: 'Midterms Celebration',
+    description: 'A fun and lighthearted moment after completing our midterms, captured in a deep-fried style.',
+    date: '2025-08-26',
+    category: 'School Life',
+    tags: ['midterms', 'celebration', 'friendship']
   }
 ];
 
-const categories = ['All', 'Awards', 'Competitions', 'School Life', 'Academic', 'Personal', 'Technology'];
+const categories = ['All', 'Awards', 'Competitions', 'School Life', 'Academic', 'Personal', 'Technology', 'Adventure'];
 
 export default function DetailedGallery() {
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [selectedPhoto, setSelectedPhoto] = useState<Photo | null>(null);
   const [currentPhotoIndex, setCurrentPhotoIndex] = useState(0);
 
-  const filteredPhotos = selectedCategory === 'All' 
-    ? photos 
-    : photos.filter(photo => photo.category === selectedCategory);
+  const filteredPhotos = selectedCategory === 'All'
+    ? photos
+    : photos.filter(photo => photo.category.toLowerCase() === selectedCategory.toLowerCase());
+
+  console.log('Selected Category:', selectedCategory);
+  console.log('Filtered Photos:', filteredPhotos);
+  console.log('Categories:', categories);
+  console.log('Photos:', photos);
 
   const openLightbox = (photo: Photo) => {
     setSelectedPhoto(photo);
@@ -118,11 +212,16 @@ export default function DetailedGallery() {
     setSelectedPhoto(filteredPhotos[prevIndex]);
   };
 
+  // Correct the buttonClass logic with type definition
+  const buttonClass = (currentCategory: string) => selectedCategory === currentCategory
+    ? 'bg-black dark:bg-white text-white dark:text-black border-black dark:border-white'
+    : 'bg-white dark:bg-black text-black dark:text-white border-gray-300 dark:border-gray-600 hover:border-black dark:hover:border-white';
+
   return (
     <>
       <section id="gallery" className="py-24 bg-gray-50 dark:bg-gray-900 relative">
         <div className="absolute inset-0 bg-paper opacity-[0.02]"></div>
-        
+
         <div className="container mx-auto px-6">
           <div className="max-w-7xl mx-auto">
             {/* Section header */}
@@ -150,15 +249,18 @@ export default function DetailedGallery() {
               viewport={{ once: true }}
               className="flex flex-wrap justify-center gap-3 mb-12"
             >
+              {/* Update button styles for better appearance */}
               {categories.map((category) => (
                 <button
                   key={category}
-                  onClick={() => setSelectedCategory(category)}
-                  className={`px-6 py-3 rounded-full border-2 font-mono uppercase tracking-wider text-sm transition-all duration-300 ${
-                    selectedCategory === category
-                      ? 'bg-black dark:bg-white text-white dark:text-black border-black dark:border-white'
-                      : 'bg-white dark:bg-black text-black dark:text-white border-gray-300 dark:border-gray-600 hover:border-black dark:hover:border-white'
-                  }`}
+                  onClick={() => {
+                    console.log('Category clicked:', category); // Debugging log
+                    setSelectedCategory(category);
+                  }}
+                  className={`px-6 py-2 rounded-full border-2 font-mono uppercase tracking-wide text-sm transition-all duration-300 shadow-md hover:shadow-lg ${selectedCategory === category
+                    ? 'bg-black dark:bg-white text-white dark:text-black border-black dark:border-white'
+                    : 'bg-white dark:bg-black text-black dark:text-white border-gray-300 dark:border-gray-600 hover:border-black dark:hover:border-white'
+                    }`}
                 >
                   {category}
                 </button>
@@ -181,9 +283,7 @@ export default function DetailedGallery() {
                   {/* Photo container */}
                   <div className="aspect-[4/3] bg-gray-200 dark:bg-gray-800 relative overflow-hidden">
                     <div className="absolute inset-0 bg-black dark:bg-white opacity-0 group-hover:opacity-10 transition-opacity duration-300 z-10"></div>
-                    <div className="absolute inset-0 flex items-center justify-center text-gray-500 dark:text-gray-400">
-                      <PhotoIcon className="w-12 h-12" />
-                    </div>
+                    <img src={photo.src} style={{ width: '100%', height: '100%', objectFit: 'cover' }} alt={photo.title} />
                   </div>
 
                   {/* Photo info */}
@@ -299,10 +399,8 @@ export default function DetailedGallery() {
 
             {/* Image */}
             <div className="flex-1 relative bg-gray-900 flex items-center justify-center">
-              <div className="w-full h-96 bg-gray-800 flex items-center justify-center text-gray-400">
-                <PhotoIcon className="w-16 h-16" />
-              </div>
-              
+              <img src={selectedPhoto.src} style={{ width: '100%', height: '100%', objectFit: 'cover' }} alt={selectedPhoto.title} />
+
               {/* Navigation */}
               <button
                 onClick={prevPhoto}
@@ -319,13 +417,15 @@ export default function DetailedGallery() {
             </div>
 
             {/* Info */}
-            <div className="text-white mt-4">
-              <p className="text-gray-300 mb-2">{selectedPhoto.description}</p>
-              <div className="flex items-center gap-4 text-sm text-gray-400">
-                <span>{selectedPhoto.category}</span>
-                <span>{new Date(selectedPhoto.date).toLocaleDateString()}</span>
+            {selectedPhoto && (
+              <div className="text-white mt-4">
+                <p className="text-gray-300 mb-2">{selectedPhoto.description}</p>
+                <div className="flex items-center gap-4 text-sm text-gray-400">
+                  <span>{selectedPhoto.category}</span>
+                  <span>{new Date(selectedPhoto.date).toLocaleDateString()}</span>
+                </div>
               </div>
-            </div>
+            )}
           </div>
         </div>
       )}

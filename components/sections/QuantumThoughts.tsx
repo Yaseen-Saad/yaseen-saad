@@ -86,60 +86,6 @@ const thoughtCategories = [
   'Time Perception'
 ]
 
-const RandomThoughtGenerator = () => {
-  const [currentThought, setCurrentThought] = useState(0)
-  const [isGenerating, setIsGenerating] = useState(false)
-
-  const randomThoughts = [
-    "What if electrons have social media accounts?",
-    "Is debugging just applied philosophy?",
-    "Do quantum particles procrastinate?",
-    "Can you recursively think about recursion?",
-    "Is the speed of light just universe's bandwidth limit?",
-    "Do black holes have error logs?",
-    "Is consciousness just an emergent property of complex enough if-else statements?",
-    "What if prime numbers are the universe's way of keeping secrets?"
-  ]
-
-  const generateRandomThought = () => {
-    setIsGenerating(true)
-    setTimeout(() => {
-      setCurrentThought(Math.floor(Math.random() * randomThoughts.length))
-      setIsGenerating(false)
-    }, 1000)
-  }
-
-  return (
-    <div className="bg-black dark:bg-white text-white dark:text-black p-6 rounded-lg border border-gray-800 dark:border-gray-200">
-      <div className="text-center">
-        <SparklesIcon className="w-8 h-8 mx-auto mb-4" />
-        <h4 className="font-bold mb-4">Random Thought Generator</h4>
-        <motion.div
-          key={currentThought}
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          className="bg-gray-900 dark:bg-gray-100 rounded-lg p-4 mb-4 min-h-[80px] flex items-center justify-center"
-        >
-          {isGenerating ? (
-            <div className="animate-spin">
-              <BeakerIcon className="w-6 h-6" />
-            </div>
-          ) : (
-            <p className="text-center italic text-sm">"{randomThoughts[currentThought]}"</p>
-          )}
-        </motion.div>
-        <button
-          onClick={generateRandomThought}
-          disabled={isGenerating}
-          className="px-4 py-2 bg-gray-800 dark:bg-gray-200 text-white dark:text-black rounded-lg hover:bg-gray-700 dark:hover:bg-gray-300 transition-colors disabled:opacity-50 text-sm"
-        >
-          {isGenerating ? 'Generating...' : 'Generate Random Thought'}
-        </button>
-      </div>
-    </div>
-  )
-}
-
 export default function QuantumThoughts() {
   const [selectedCategory, setSelectedCategory] = useState('All Thoughts')
 
@@ -167,11 +113,8 @@ export default function QuantumThoughts() {
           viewport={{ once: true }}
           className="text-center mb-12"
         >
-          <div className="inline-flex items-center gap-2 px-4 py-2 bg-gray-100 dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-full mb-6">
-            <LightBulbIcon className="w-5 h-5 text-black dark:text-white" />
-            <span className="text-sm font-mono font-bold text-black dark:text-white">QUANTUM THOUGHTS</span>
-          </div>
           <h2 className="text-4xl md:text-5xl font-bold mb-6 text-black dark:text-white">
+            
             Mind Fragments
           </h2>
           <p className="text-lg md:text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto leading-relaxed">
@@ -237,9 +180,6 @@ export default function QuantumThoughts() {
 
           {/* Sidebar */}
           <div className="space-y-4">
-            {/* Random Thought Generator */}
-            <RandomThoughtGenerator />
-
             {/* Thought Stats */}
             <div className="bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-lg p-4">
               <h4 className="font-bold text-black dark:text-white mb-3 text-sm">Mind Stats</h4>
@@ -271,9 +211,6 @@ export default function QuantumThoughts() {
                 "The real question isn't whether machines think, but whether humans do." 
                 - B.F. Skinner (but also me, when debugging at 3 AM)
               </p>
-              <button className="text-xs font-mono uppercase tracking-wider opacity-80 hover:opacity-100 transition-opacity">
-                Random Quote →
-              </button>
             </div>
           </div>
         </div>

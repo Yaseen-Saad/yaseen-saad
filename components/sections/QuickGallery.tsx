@@ -8,35 +8,34 @@ import { PhotoIcon, ArrowRightIcon } from '@heroicons/react/24/outline';
 const galleryPreviews = [
   {
     id: 1,
-    src: '/public/assets/images/Yaseen Saad Eldin Formall.jpg',
-    alt: 'Yaseen at formal event',
-    caption: 'Physics Competition Award'
+    src: '/assets/images/gallery/IMG-20250826-WA0025.jpg',
+    alt: 'Yaseen while testing the IPhR\'s Platform',
+    caption: 'Testing the IPhR\'s Anti-cheating System'
   },
   {
     id: 2,
-    src: '/public/assets/images/physicsbrawl.jpg',
-    alt: 'Physics Brawl competition',
-    caption: 'Physics Brawl 2024'
+    src: '/assets/images/gallery/WhatsApp Image 2025-08-26 at 00.38.26_d86adad3.jpg',
+    alt: 'Yaseen with his friend at his old school',
+    caption: 'My Friends at my very old school (I am on the left)'
   },
   {
     id: 3,
-    src: '/public/assets/images/firsttoeat.jpg',
-    alt: 'First to eat challenge',
-    caption: 'STEM School Life'
+    src: '/assets/images/gallery/websessionwithgalabia.png',
+    alt: 'Yaseen in galabia style',
+    caption: 'An Online Session at with the Web Development Track at STEM CSC'
   },
   {
     id: 4,
-    src: '/public/assets/images/physicsclubexam.jpg',
+    src: '/assets/images/gallery/physicsclubexam2024.jpg',
     alt: 'Physics club exam',
-    caption: 'Physics Club Activities'
+    caption: 'Me Eating while Acing the Physics Club\'s Final Exam (I am wearing red at the left)'
   }
 ];
 
 export default function QuickGallery() {
   return (
     <section className="py-24 bg-white dark:bg-black relative">
-      <div className="absolute inset-0 bg-paper opacity-[0.02]"></div>
-      
+
       <div className="container mx-auto px-6">
         <div className="max-w-6xl mx-auto">
           {/* Section header */}
@@ -52,7 +51,7 @@ export default function QuickGallery() {
             </h2>
             <div className="w-24 h-1 bg-black dark:bg-white mx-auto mb-6"></div>
             <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-              Moments captured from competitions, achievements, and daily life at STEM school.
+              Moments captured from random things in my daily life at STEM October school.
             </p>
           </motion.div>
 
@@ -68,10 +67,8 @@ export default function QuickGallery() {
                 whileHover={{ scale: 1.05 }}
                 className="group relative aspect-square bg-gray-200 dark:bg-gray-800 border-2 border-black dark:border-white overflow-hidden cursor-pointer"
               >
+                <img style={{ objectFit: 'cover', height: '100%', width: '100%' }} src={photo.src} alt={photo.alt} />
                 <div className="absolute inset-0 bg-black dark:bg-white opacity-0 group-hover:opacity-10 transition-opacity duration-300"></div>
-                <div className="absolute inset-0 flex items-center justify-center text-gray-500 dark:text-gray-400">
-                  <PhotoIcon className="w-8 h-8" />
-                </div>
                 <div className="absolute bottom-0 left-0 right-0 bg-black dark:bg-white bg-opacity-80 dark:bg-opacity-80 text-white dark:text-black p-2 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
                   <p className="text-xs font-mono">{photo.caption}</p>
                 </div>
@@ -87,7 +84,7 @@ export default function QuickGallery() {
             viewport={{ once: true }}
             className="text-center"
           >
-            <Link 
+            <Link
               href="/about#gallery"
               className="inline-flex items-center gap-2 px-8 py-4 bg-black dark:bg-white text-white dark:text-black border-2 border-black dark:border-white hover:bg-white hover:text-black dark:hover:bg-black dark:hover:text-white transition-all duration-300 font-mono uppercase tracking-wider"
             >

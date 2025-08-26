@@ -89,34 +89,6 @@ export default function PersonalStory() {
             </div>
           </motion.div>
 
-          {/* Personal photos section */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-            viewport={{ once: true }}
-            className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8"
-          >
-            <div className="text-center">
-              <div className="w-full aspect-square bg-gray-200 dark:bg-gray-800 border-2 border-black dark:border-white mb-4 flex items-center justify-center">
-                <span className="text-gray-500 dark:text-gray-400 font-mono text-sm">Photo 1</span>
-              </div>
-              <p className="text-sm font-mono text-gray-600 dark:text-gray-400">At the Physics Competition</p>
-            </div>
-            <div className="text-center">
-              <div className="w-full aspect-square bg-gray-200 dark:bg-gray-800 border-2 border-black dark:border-white mb-4 flex items-center justify-center">
-                <span className="text-gray-500 dark:text-gray-400 font-mono text-sm">Photo 2</span>
-              </div>
-              <p className="text-sm font-mono text-gray-600 dark:text-gray-400">Coding at DECI</p>
-            </div>
-            <div className="text-center">
-              <div className="w-full aspect-square bg-gray-200 dark:bg-gray-800 border-2 border-black dark:border-white mb-4 flex items-center justify-center">
-                <span className="text-gray-500 dark:text-gray-400 font-mono text-sm">Photo 3</span>
-              </div>
-              <p className="text-sm font-mono text-gray-600 dark:text-gray-400">STEM School Life</p>
-            </div>
-          </motion.div>
-
           {/* Fun facts */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}

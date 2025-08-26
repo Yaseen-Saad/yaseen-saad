@@ -2,6 +2,7 @@ import PersonalStory from '@/components/sections/PersonalStory';
 import Timeline from '@/components/sections/Timeline';
 import PhilosophyCorner from '@/components/sections/PhilosophyCorner';
 import DetailedGallery from '@/components/sections/DetailedGallery';
+import MyRapLines from '@/components/sections/MyRapLines';
 
 export const metadata = {
   title: 'About - The Universe Through My Eyes',
@@ -15,6 +16,7 @@ export default function AboutPage() {
       <DetailedGallery />
       <Timeline />
       <PhilosophyCorner />
+      <MyRapLines />
     </div>
   );
 }

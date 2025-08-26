@@ -5,7 +5,6 @@ import Hero from '@/components/sections/Hero';
 import LastTinyAces from '@/components/sections/LastTinyAces';
 import CurrentlyCooking from '@/components/sections/CurrentlyCooking';
 import QuickGallery from '@/components/sections/QuickGallery';
-import ResourceLibrary from '@/components/sections/ResourceLibrary';
 import SideProjectsLab from '@/components/sections/SideProjectsLab';
 import QuantumThoughts from '@/components/sections/QuantumThoughts';
 import MusicRapSection from '@/components/sections/MusicRapSection';
@@ -32,13 +31,12 @@ export default function HomePageWrapper() {
     <div className="min-h-screen">
       <Hero />
       <MusicRapSection />
+      <LastBlogs />
       <QuickGallery />
       <QuantumThoughts />
-      <SideProjectsLab />
       <CurrentlyCooking />
-      <ResourceLibrary />
-      <LastBlogs />
       <LastTinyAces />
+      <SideProjectsLab />
     </div>
   );
 }
