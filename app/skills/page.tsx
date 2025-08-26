@@ -1,6 +1,5 @@
 import TechStackShowcase from '@/components/sections/TechStackShowcase';
 import YouMayNeedMe from '@/components/sections/YouMayNeedMe';
-import DigitalPlayground from '@/components/sections/DigitalPlayground';
 import ScoresAchievements from '@/components/sections/ScoresAchievements';
 
 
