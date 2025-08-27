@@ -5,6 +5,7 @@ import {useState} from 'react'
 import {
   XMarkIcon,
   ChevronRightIcon,
+  ChevronLeftIcon,
   CalendarIcon,
   TagIcon
 } from '@heroicons/react/24/outline';
