@@ -348,7 +348,7 @@ export default function Hero() {
           <div className="text-center bg-black dark:bg-white text-white dark:text-black p-6 rounded-lg">
             <StarIcon className="w-8 h-8 mx-auto mb-3" />
             <div className="text-2xl font-bold mb-2">1500</div>
-            <div className="text-sm font-mono uppercase tracking-wider">SAT October</div>
+            <div className="text-sm font-mono uppercase tracking-wider">SAT</div>
           </div>
         </motion.div>
       </div>
