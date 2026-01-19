@@ -17,15 +17,6 @@ type Project = {
 
 const currentProjects: Project[] = [
   {
-    title: "My personal statement",
-    subtitle: "Working on my p.s. for college apps",
-    description: "Working on building my personal statement for college apps, with cohesive narrative and these stuff, probably writing about my journey with self trust (I am just so cooked).",
-    status: "In Development",
-    progress: 5,
-    image: false,
-    tech: ["Applying to College", "Personal Qualities", "Writing"],
-  },
-  {
     title: "SAT Vocabulary Helper",
     subtitle: "Making English vocab less painful",
     description: "Building a tool to help myself and others master SAT vocabulary, with spaced repetition and fun mnemonics. English words are cooking me, so I'm cooking back!",
@@ -35,22 +26,13 @@ const currentProjects: Project[] = [
     tech: ["SAT Prep", "Vocabulary", "Spaced Repetition", "Mnemonics"],
   },
   {
-    title: "Preparing for the SAT (Target 1500+)",
-    subtitle: "English is just cooking me",
-    description: "Grinding for a 1500+ SAT score. Focusing on English, reading, and writing sections. Practice, practice, and more practice.",
-    status: "Active",
-    progress: 35,
+    title: "Studying for my last year leaving exams",
+    subtitle: "The Jungle... I mean STEM High School for Boys - 6th of October",
+    description: "Having a war with Arabic, Mathematics, Arabic, Mechanics, Arabic, Physics, Arabic, English, Arabic, French, Arabic, Chemistry, and Arabic.",
+    status: "Just started (beyound cooked)",
+    progress: 10,
     image: false,
-    tech: ["SAT Prep", "English", "Practice", "Test Strategy"],
-  },
-  {
-    title: "Computational Astrophysics Paper",
-    subtitle: "Youth Science Journal (YSJ)",
-    description: "Researching star death scenarios and stellar evolution using computational models. Basically trying to understand how stars have existential crises.",
-    status: "Research Phase",
-    progress: 40,
-    link: "https://ys-journal.org/",
-    tech: ["Python", "Astrophysics", "Research"],
+    tech: ["Arabic", "Arabic", "Arabic"],
   },
   {
     title: "This Portfolio Website",
