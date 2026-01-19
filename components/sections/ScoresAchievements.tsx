@@ -28,8 +28,8 @@ const academicScores = [
     items: [
       { name: 'STEM Entrance Exam', score: '33rd', detail: 'Out of 15,000+ of Egypt\'s most intelegent candidates', icon: <StarIcon className="w-5 h-5" /> },
       { name: 'TOFAS Exam', score: '56/60', detail: '93.3% Score', icon: <ChartBarIcon className="w-5 h-5" /> },
-      { name: 'SAT (Planned)', score: 'October 2025', detail: 'Target: 1500+. Current: 1420', icon: <AcademicCapIcon className="w-5 h-5" /> },
-      { name: 'Dulingo English Test (Planned)', score: 'November 2025', detail: 'Target: 130+', icon: <GlobeAltIcon className="w-5 h-5" /> }
+      { name: 'SAT', score: '1500', detail: '790 Math, 710 EBRW', icon: <AcademicCapIcon className="w-5 h-5" /> },
+      { name: 'Dulingo English Test (Planned)', score: 'Feb 2026', detail: 'Target: 130+', icon: <GlobeAltIcon className="w-5 h-5" /> }
     ]
   }
 ]
